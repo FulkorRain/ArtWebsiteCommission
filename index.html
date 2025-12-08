@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruitsphynx</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+ 
+ 
+    <style>
+     .commbox{
+    width : 800px;
+    height: 1130px; 
+    border : double;
+    margin : auto;
+    padding: 7px;
+    color:hotpink;
+    background-image: url(https://files.catbox.moe/s7ayh4.gif);
+     }
+    </style>
+ 
+    <style>
+    .greaterdiv{
+      min-height: 100%; 
+    }
+    </style>
+ 
+    <style> .linkbox{ 
+      width: 130px;
+      border: none;
+      height: 500px;
+      float: left;
+      margin:10px;
+    } </style>
+ 
+      <style> .centermostbox{
+      width: 350px;
+      border: solid;
+      height: auto;
+      padding: 5px;
+      height:250px;
+      overflow: scroll;
+      color:pink;
+      margin-right: 300px;
+      background:white;
+    }
+    </style>
+ 
+  <style> .middlebox{
+      width: 350px;
+      border: solid;
+      height: auto;
+      padding: 5px;
+      height:248px;
+      overflow: scroll;
+      color:pink;
+      margin-right: 305px;
+      margin-top: 8px;
+      background:white;
+    }
+    </style>
+ 
+        <style> .rightcenterbox{ 
+      width: 270px;
+      border: solid pink;
+      height: 260px;
+      background: white;
+      position: absolute;
+      margin-left: 523px;
+    } </style>
+ 
+  <style> .rightcenterbox2{ 
+      width: 270px;
+      border: solid pink;
+      height: 122px;
+      background: white;
+      margin-top: 275px;
+      margin-left:523px;
+    position:absolute;
+    } </style>
+ 
+  <style> .rightcenterbox3{ 
+      width: 270px;
+      border: solid pink;
+      height: 122px;
+      background: white;
+      margin-top: 410px;
+      margin-left:523px;
+    position:absolute;
+    } </style>
+ 
+          <style> .blinkiebox{ 
+     padding:5px;
+     margin-top:10px;
+    } </style>
+ 
+              <style> .bottomdecor{ 
+     width: 700px;
+     height: 450px;
+     background-image: url(https://i.imgur.com/s5ydy7Z.gif);
+     background-size: cover;
+    } </style>
+ 
+             <style> .pet{ 
+     padding:5px;
+     margin-right: 400px;
+     margin-top: 7px;
+    } </style>
+ 
+    <style> .puppy1{
+      position:absolute;
+      margin-left: 250px;
+      margin-top: -115px;
+      }</style>
+ 
+    <style> .puppy2{
+      position:absolute;
+      margin-left: 500px;
+      margin-top: -280px;
+      }</style>
+ 
+    <style>
+  body {
+    background-image: url('https://f2.toyhou.se/file/f2-toyhou-se/images/110997028_uu3DcLwfIdXK6rc.jpg'); 
+    background-repeat: repeat;
+ 
+  }
+  </style>
+<style>* 
+ 
+{cursor: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/58566fec-767c-4b43-9655-1d0cf69219fa/d5mznwj-ce70c2cf-8711-4ff8-8d77-bd661f084252.png), auto !important;
+ 
+}
+ 
+</style>
+ 
+<script type="text/javascript">
+// <![CDATA[
+var colour="#FFFFFF";
+var sparkles=120;
+ 
+/****************************
+*  Tinkerbell Magic Sparkle *
+* (c) 2005 mf2fm web-design *
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+****************************/
+var x=ox=400;
+var y=oy=300;
+var swide=800;
+var shigh=600;
+var sleft=sdown=0;
+var tiny=new Array();
+var star=new Array();
+var starv=new Array();
+var starx=new Array();
+var stary=new Array();
+var tinyx=new Array();
+var tinyy=new Array();
+var tinyv=new Array();
+ 
+window.onload=function() { if (document.getElementById) {
+  var i, rats, rlef, rdow;
+  for (var i=0; i<sparkles; i++) {
+    var rats=createDiv(3, 3);
+    rats.style.visibility="hidden";
+    document.body.appendChild(tiny[i]=rats);
+    starv[i]=0;
+    tinyv[i]=0;
+    var rats=createDiv(5, 5);
+    rats.style.backgroundColor="transparent";
+    rats.style.visibility="hidden";
+    var rlef=createDiv(1, 5);
+    var rdow=createDiv(5, 1);
+    rats.appendChild(rlef);
+    rats.appendChild(rdow);
+    rlef.style.top="2px";
+    rlef.style.left="0px";
+    rdow.style.top="0px";
+    rdow.style.left="2px";
+    document.body.appendChild(star[i]=rats);
+  }
+  set_width();
+  sparkle();
+}}
+ 
+function sparkle() {
+  var c;
+  if (x!=ox || y!=oy) {
+    ox=x;
+    oy=y;
+    for (c=0; c<sparkles; c++) if (!starv[c]) {
+      star[c].style.left=(starx[c]=x)+"px";
+      star[c].style.top=(stary[c]=y)+"px";
+      star[c].style.clip="rect(0px, 5px, 5px, 0px)";
+      star[c].style.visibility="visible";
+      starv[c]=50;
+      break;
+    }
+  }
+  for (c=0; c<sparkles; c++) {
+    if (starv[c]) update_star(c);
+    if (tinyv[c]) update_tiny(c);
+  }
+  setTimeout("sparkle()", 40);
+}
+ 
+function update_star(i) {
+  if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
+  if (starv[i]) {
+    stary[i]+=1+Math.random()*3;
+    if (stary[i]<shigh+sdown) {
+      star[i].style.top=stary[i]+"px";
+      starx[i]+=(i%5-2)/5;
+      star[i].style.left=starx[i]+"px";
+    }
+    else {
+      star[i].style.visibility="hidden";
+      starv[i]=0;
+      return;
+    }
+  }
+  else {
+    tinyv[i]=50;
+    tiny[i].style.top=(tinyy[i]=stary[i])+"px";
+    tiny[i].style.left=(tinyx[i]=starx[i])+"px";
+    tiny[i].style.width="2px";
+    tiny[i].style.height="2px";
+    star[i].style.visibility="hidden";
+    tiny[i].style.visibility="visible"
+  }
+}
+ 
+function update_tiny(i) {
+  if (--tinyv[i]==25) {
+    tiny[i].style.width="1px";
+    tiny[i].style.height="1px";
+  }
+  if (tinyv[i]) {
+    tinyy[i]+=1+Math.random()*3;
+    if (tinyy[i]<shigh+sdown) {
+      tiny[i].style.top=tinyy[i]+"px";
+      tinyx[i]+=(i%5-2)/5;
+      tiny[i].style.left=tinyx[i]+"px";
+    }
+    else {
+      tiny[i].style.visibility="hidden";
+      tinyv[i]=0;
+      return;
+    }
+  }
+  else tiny[i].style.visibility="hidden";
+}
+ 
+document.onmousemove=mouse;
+function mouse(e) {
+  set_scroll();
+  y=(e)?e.pageY:event.y+sdown;
+  x=(e)?e.pageX:event.x+sleft;
+}
+ 
+function set_scroll() {
+  if (typeof(self.pageYOffset)=="number") {
+    sdown=self.pageYOffset;
+    sleft=self.pageXOffset;
+  }
+  else if (document.body.scrollTop || document.body.scrollLeft) {
+    sdown=document.body.scrollTop;
+    sleft=document.body.scrollLeft;
+  }
+  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+    sleft=document.documentElement.scrollLeft;
+	sdown=document.documentElement.scrollTop;
+  }
+  else {
+    sdown=0;
+    sleft=0;
+  }
+}
+ 
+window.onresize=set_width;
+function set_width() {
+  if (typeof(self.innerWidth)=="number") {
+    swide=self.innerWidth;
+    shigh=self.innerHeight;
+  }
+  else if (document.documentElement && document.documentElement.clientWidth) {
+    swide=document.documentElement.clientWidth;
+    shigh=document.documentElement.clientHeight;
+  }
+  else if (document.body.clientWidth) {
+    swide=document.body.clientWidth;
+    shigh=document.body.clientHeight;
+  }
+}
+ 
+function createDiv(height, width) {
+  var div=document.createElement("div");
+  div.style.position="absolute";
+  div.style.height=height+"px";
+  div.style.width=width+"px";
+  div.style.overflow="hidden";
+  div.style.backgroundColor=colour;
+  return (div);
+}
+// ]]>
+</script>
+</style>
+  </head>
+  <center> <div class="greaterdiv"> 
+  <img src="https://file.garden/aStH4SBKNTw4mZIY/Puppy%20Banner"> 
+  <br> 
+  <div class="commbox">
+  <div class="centerbox">
+  <div class="rightcenterbox">
+    <p style=color:pink> text text </p>
+  </div>
+  <div class="rightcenterbox2">
+    <p style=color:pink> text text </p>
+  </div>
+ 
+    <div class="rightcenterbox3">
+    <p style=color:pink> text text </p>
+  </div>
+ 
+  <div class="linkbox"> <br> <img src="https://file.garden/aStH4SBKNTw4mZIY/Sippy%20bed%20png" style="height:100px;cursor:grab;" ><br><br><br><a href="https://discord.gg/um9UbFEGyk"><img src="https://file.garden/aStH4SBKNTw4mZIY/New%20button%20pink" style="width:100px;" title="Discord!"></a> <br> <a href="KINS PAGE LINK"><img src="https://file.garden/aStH4SBKNTw4mZIY/New%20button%20pink" style="width:100px;" title="Kins!"></a> <br> <a href="COMMISSIONS LINK"><img src="https://file.garden/aStH4SBKNTw4mZIY/New%20button%20pink" style="width:100px;" title="Commissions!"></a>
+<a href="LINK"><img src="https://file.garden/aStH4SBKNTw4mZIY/New%20button%20pink" style="width:100px;" title="extra button :3"></a> 
+<a href="https://toyhou.se/Fruitsphynx"><img src="https://file.garden/aStH4SBKNTw4mZIY/Bone%20button" style="width:100px;" title="Toyhouse!"></a> <img src="https://file.garden/aStH4SBKNTw4mZIY/Woofers%20bed%20png" style="height:100px;cursor:grab;" > </div>
+  <div class="centermostbox"> <img src="https://i.imgur.com/chgKfI6.gif" > <br> 
+ HAI ^_^ Welcome to my page !! I'm Dally, a puppy loving furry artist that sells adoptables and art commissions ! Please have fun exploring my internet playground !
+ <br> <img src="https://i.imgur.com/kEegYCp.png"> <!--this is a divider i put a placeholder one but put whatever you want in here --> 
+ <br> speak more more more blah blah blah blah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blah blah blah blah blah blah blah blah blah blah blah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blah put whatever info u want here uhhh i think if theres too much it might end up scrolling? i honestly dont remember </div>
+  </div>
+  <div class="middlebox"> aaa</div>
+ 
+  <marquee>
+  <div class="blinkiebox">
+    <img src="https://adriansblinkiecollection.neocities.org/g77.gif">
+    <img src="https://64.media.tumblr.com/c21fe8d695d475dc5d9bb04b4c59a062/acab4e6c996812a7-61/s250x400/92b9ed0e33c2c2c14f8981c139fc9800110e9cbd.gifv" style="width:150px;"> 
+    <img src="https://64.media.tumblr.com/f05253f29889f98c947600befed4526a/49451e170baa02e5-3e/s250x400/89754c82b41ed53fa1e46cfec2ed788fb733142a.gifv">
+    <img src="https://64.media.tumblr.com/6ef7b3e256ed237329bb6794f51b55a2/c409f3c4790435bc-b5/s250x400/eb931c18c508407931e726cd518302c86c86b456.gifv">
+     <img src="https://64.media.tumblr.com/c6049874d6eda1d8bd69da7ff1bf4b67/b633c28a874dcc10-76/s250x400/b62e73eb234f21a9c530576f8558866722ed5a86.gifv">
+    <img src="https://64.media.tumblr.com/bcf92cddadadaaa3919f3f44830b6f32/24bffa3988c7e873-70/s250x400/60c8901c8883ae0b6c0debb8ff16c46caf97da5d.gifv">
+     <img src="https://64.media.tumblr.com/a79422aeea15284d530e12b7c28d7d93/acab4e6c996812a7-93/s250x400/c5060b8d9958e97dbf64dd0bb7bc9bfb4d62cf98.gifv" style="width:150px;">
+ <img src="https://64.media.tumblr.com/4fe310709a8f62cb3efe32d23b944bac/27f4388618e0f700-ed/s250x400/adee131b97699f363c9050ddc1402a384f9f5cac.gifv">
+<img src="https://files.catbox.moe/z3gcm6.gif">
+</div>
+</marquee>
+ 
+<div class="bottomdecor">
+ 
+<div class="pet">
+<iframe width="314" height="321" scrolling="no" src="https://gifypet.neocities.org/pet/pet.html?name=Sippy&dob=1764448986&gender=undefined&element=Earth&pet=https%3A%2F%2Ffile.garden%2FaSKX-10SJQxLqXaf%2FIMG_4982.gif&map=https%3A%2F%2Ffile.garden%2FaSKX-10SJQxLqXaf%2FIMG_4980.gif&background=https%3A%2F%2Ffile.garden%2FaSKX-10SJQxLqXaf%2FIMG_4193.gif&tablecolor=%23b0a4df&textcolor=%23b18181" frameborder="0"></iframe>
+  </div>
+ 
+<div class="puppy1">
+  <img width=150px; src="https://cdn.discordapp.com/attachments/1227325656019243038/1445139991104589996/IMG_7839.gif?ex=692f42ff&is=692df17f&hm=eb85afbdee1174ad697248ada9205b7142295b698cb5bddbef7f18b805b7bc79&">
+  </div>
+ 
+<div class="puppy2">
+  <img width=150px; src="https://cdn.discordapp.com/attachments/1227325656019243038/1445139991826006208/IMG_7838.gif?ex=692f42ff&is=692df17f&hm=28f93e952139b0feeaa97adb4abee0bb800c305ff7787eaa632f4d3530846da8&">
+  </div>
+ 
+  </div> </div>
+  </center>
+  </div>
+ 
+ 
+  </body>
+</html>
