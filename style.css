@@ -1,3 +1,66 @@
 :root { 
     --text-color: pink;
 }
+
+* {
+  cursor: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/58566fec-767c-4b43-9655-1d0cf69219fa/d5mznwj-ce70c2cf-8711-4ff8-8d77-bd661f084252.png), auto !important;
+  font-family: "MS UI Gothic", "MS PGothic", "MS Gothic", sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-image: url("https://f2.toyhou.se/file/f2-toyhou-se/images/110997028_uu3DcLwfIdXK6rc.jpg");
+  background-repeat: repeat;
+}
+
+.page {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner {
+    display: block;
+}
+
+.content {
+    height: 1150px;
+    width: 820px;
+    margin: 0 auto;
+    padding: 7px;
+    color: var(--text-color);
+    background-image: url(https://files.catbox.moe/s7ayh4.gif);
+}
+
+.link-box {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.link-button {
+    position: relative;
+    display:inline-block;
+    width: 120px;
+    height: auto;
+}
+
+.link-button img {
+    width: 100%;
+    display: block;
+}
+
+.button-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #b07469;
+    font-size: 16px;
+    pointer-events: none;
+
+}
