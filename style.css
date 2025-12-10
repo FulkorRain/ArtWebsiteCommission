@@ -31,7 +31,7 @@ body {
 
 .content {
     height: 1150px;
-    width: 820px;
+    width: 780px;
     margin: 0 auto;
     padding: 7px;
     color: var(--text-color);
@@ -45,17 +45,37 @@ body {
     grid-template-columns: 1fr;
 }
 
-.link-button {
+.link-button,
+.link-button-bone {
     position: relative;
-    display:inline-block;
+    display: inline-block;
     width: 120px;
-    height: auto;
+    height: 50px;
+    transition: 0.2 ease;
 }
 
-.link-button img {
-    width: 100%;
-    display: block;
+.link-button:hover,
+.link-button-bone:hover {
+    transform: scale(1.05);
 }
+
+.link-button {
+    background-image: url("https://file.garden/aStH4SBKNTw4mZIY/Newbutton.pink");
+    background-size: cover;
+}
+
+.link-button-bone {
+    background-image: url("https://file.garden/aStH4SBKNTw4mZIY/Bone%20button");
+    width: 120px;
+    height: 42px; /* this is so stupid, it needs this specific size for some reason */
+    background-size: cover;
+}
+
+.link-button:hover {
+    background-image: url("https://file.garden/aStH4SBKNTw4mZIY/Newbutton.purp")
+}
+
+
 
 .button-text {
     position: absolute;
@@ -70,9 +90,11 @@ body {
 
 .grid-container {
     display: grid;
+    margin-left: 160px;
+    margin-top: -520px;
     gap: 10px;
 
-    grid-template-columns: 320px 160px 160px;
+    grid-template-columns: 280px 160px 160px;
     grid-template-areas: 
     "welcomebox statsbox statsbox"
     "blinkies blinkies blinkies"
@@ -80,15 +102,43 @@ body {
     "stamp stamp stamp"
     "tinyimage musicplayer rightmostbox";
 }
-.welcome-box  { grid-area: welcome; }
-.stats-box    { grid-area: stats; }
+.welcome-box  { grid-area: welcomebox; }
+.stats-box    { grid-area: statsbox; }
 .blinkies-area{ grid-area: blinkies; }
-.pet-box      { grid-area: pet; }
-.linkme-box   { grid-area: linkme; }
-.chat-box     { grid-area: chat; }
-.stamp-area   { grid-area: stamps; }
-.tiny-img     { grid-area: tinyimg; }
-.music-player { grid-area: music; }
-.rightmost-box{ grid-area: rightmost; }
+.pet-box      { grid-area: petbox; }
+.linkme-box   { grid-area: linkmebox; }
+.chat-box     { grid-area: chatbox; }
+.stamp-area   { grid-area: stamp; }
+.tiny-img     { grid-area: tinyimage; }
+.music-player { grid-area: musicplayer; }
+.rightmost-box{ grid-area: rightmostbox; }
 
+.welcome-box,
+.stats-box,
+.blinkies-area,
+.pet-box,
+.linkme-box,
+.chat-box,
+.stamp-area,
+.music-player,
+.rightmost-box {
+  min-height: 120px;
+  border: 2px solid hotpink;
+  background: rgba(255,255,255,0.7);
+}
+
+/* Divider rows can be shorter */
+.blinkies-area,
+.stamp-area {
+  min-height: 55px;
+}
+
+/* Tiny image sizing */
+.tiny-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 2px solid hotpink;
+  background: rgba(255,255,255,0.7);
+}
 
