@@ -67,3 +67,28 @@ body {
     pointer-events: none;
 
 }
+
+.grid-container {
+    display: grid;
+    gap: 10px;
+
+    grid-template-columns: 320px 160px 160px;
+    grid-template-areas: 
+    "welcomebox statsbox statsbox"
+    "blinkies blinkies blinkies"
+    "petbox linkmebox chatbox"
+    "stamp stamp stamp"
+    "tinyimage musicplayer rightmostbox";
+}
+.welcome-box  { grid-area: welcome; }
+.stats-box    { grid-area: stats; }
+.blinkies-area{ grid-area: blinkies; }
+.pet-box      { grid-area: pet; }
+.linkme-box   { grid-area: linkme; }
+.chat-box     { grid-area: chat; }
+.stamp-area   { grid-area: stamps; }
+.tiny-img     { grid-area: tinyimg; }
+.music-player { grid-area: music; }
+.rightmost-box{ grid-area: rightmost; }
+
+
