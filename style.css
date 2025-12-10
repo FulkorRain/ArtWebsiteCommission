@@ -22,6 +22,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .banner {
@@ -35,9 +36,11 @@ body {
     padding: 7px;
     color: var(--text-color);
     background-image: url(https://files.catbox.moe/s7ayh4.gif);
+    border: 3px double hotpink;
 }
 
 .link-box {
+    padding-left: 20px;
     display: grid;
     grid-template-columns: 1fr;
 }
