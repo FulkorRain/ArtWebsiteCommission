@@ -42,8 +42,8 @@ body {
     border: 3px double hotpink;
 }
 
-.sippy-img {
-  background-image: url("https://file.garden/aStH4SBKNTw4mZIY/Sippy%20bed%20png");
+.sippy-img,
+.woofers-img{
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -51,8 +51,20 @@ body {
   height: 100px;
 }
 
+.sippy-img {
+  background-image: url("https://file.garden/aStH4SBKNTw4mZIY/Sippy%20bed%20png");
+}
+
 .sippy-img:hover{
   background-image: url("https://file.garden/aStH4SBKNTw4mZIY/Sippy%20bed%20gif");
+}
+
+.woofers-img {
+  background-image: url("https://file.garden/aStH4SBKNTw4mZIY/Woofers%20bed%20png");
+}
+
+.woofers-img:hover{
+  background-image: url("https://file.garden/aStH4SBKNTw4mZIY/Gif%20woofers%20bed");
 }
 
 
