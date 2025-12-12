@@ -6,7 +6,9 @@
 * {
   cursor: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/58566fec-767c-4b43-9655-1d0cf69219fa/d5mznwj-ce70c2cf-8711-4ff8-8d77-bd661f084252.png), auto !important;
   font-family: "MS UI Gothic", "MS PGothic", "MS Gothic", sans-serif;
+  
 }
+
 
 html, body {
   height: 100%;
@@ -139,6 +141,7 @@ body {
   height: 235px;
   overflow:scroll;
   text-align: center;
+  overflow-x: hidden;
 
   /* background-image: url(https://file.garden/aStH4SBKNTw4mZIY/Welcome.gif);
   background-size: cover;
@@ -170,4 +173,24 @@ body {
   width: 150px;
   height: 150px;
   margin-left: 100px;
+}
+
+
+:is(html, body, .welcome-box)::-webkit-scrollbar {
+  width: 10px;
+}
+
+:is(html, body, .welcome-box)::-webkit-scrollbar-track{
+  background: rgba(255, 192, 203, 0.3);
+  border: 1px solid hotpink;
+}
+
+:is(html, body, .welcome-box)::-webkit-scrollbar-thumb {
+  background: hotpink;
+  border-radius: 10px;
+  border: 2px solid pink;
+}
+
+:is(html, body, .welcome-box)::-webkit-scrollbar-thumb:hover{
+  background: deeppink;
 }
