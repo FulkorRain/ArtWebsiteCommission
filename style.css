@@ -38,9 +38,23 @@ body {
     margin: 0 auto;
     padding: 7px;
     color: var(--text-color);
-    background-image: url(https://files.catbox.moe/s7ayh4.gif);
+    background-image: url("https://files.catbox.moe/s7ayh4.gif");
     border: 3px double hotpink;
 }
+
+.sippy-img {
+  background-image: url("https://file.garden/aStH4SBKNTw4mZIY/Sippy%20bed%20png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100px;
+  height: 100px;
+}
+
+.sippy-img:hover{
+  background-image: url("https://file.garden/aStH4SBKNTw4mZIY/Sippy%20bed%20gif");
+}
+
 
 .link-box {
     padding-left: 20px;
@@ -193,4 +207,16 @@ body {
 
 :is(html, body, .welcome-box)::-webkit-scrollbar-thumb:hover{
   background: deeppink;
+}
+
+.box-label {
+  
+    color: white;
+    border-bottom: 1px solid hotpink;
+    padding: 1px;
+    margin-bottom: 3px;
+    text-align: center;
+    margin: auto;
+    padding: 3px;
+    -webkit-text-stroke: 2px hotpink;
 }
