@@ -1,5 +1,6 @@
 :root { 
-    --text-color: pink;
+  --text-color: hotpink;
+  /* --text-color: #b07469; */
 }
 
 * {
@@ -125,20 +126,48 @@ body {
   min-height: 120px;
   border: 2px solid hotpink;
   background: rgba(255,255,255,0.7);
+  font-size: 16px;
 }
 
-/* Divider rows can be shorter */
 .blinkies-area,
 .stamp-area {
   min-height: 55px;
 }
 
-/* Tiny image sizing */
-.tiny-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border: 2px solid hotpink;
-  background: rgba(255,255,255,0.7);
+.welcome-box {
+  width: 335px;
+  height: 235px;
+  overflow:scroll;
+  text-align: center;
+
+  /* background-image: url(https://file.garden/aStH4SBKNTw4mZIY/Welcome.gif);
+  background-size: cover;
+  background-position: center; */
 }
 
+.welcome-wrapper {
+  position: relative
+}
+
+.welcome-gif {
+  margin-left: 15px;
+}
+
+.welcome-lace {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: -17px;
+
+  width: 335px;
+  height: auto;
+
+  pointer-events: none;
+}
+
+
+.stats-box {
+  width: 150px;
+  height: 150px;
+  margin-left: 100px;
+}
