@@ -201,11 +201,45 @@ body {
 
 
 .stats-box {
-  width: 150px;
-  height: 150px;
-  margin-left: 100px;
+  width: 250px;
+  height: 235px;
+  margin-left: 65px;
 }
 
+
+.box-label {
+  
+    color: white;
+    border-bottom: 1px solid hotpink;
+    padding: 1px;
+    margin-bottom: 3px;
+    text-align: center;
+    margin: auto;
+    padding: 3px;
+    -webkit-text-stroke: 2px hotpink;
+}
+
+.status-line {
+  display:flex;
+  align-items: center;
+  font-size: 24px;
+}
+
+.status-img {
+  height: 40px;
+  width: 40px;
+}
+
+/* this is a crime against humanity */
+.status-content {
+  height: 80px;
+  width: 200px;
+  margin-left: 25px;
+  border: 1px solid hotpink;
+  text-align: center;
+  font-size: 20px;
+}
+/* this is a crime against humanity */
 
 :is(html, body, .welcome-box)::-webkit-scrollbar {
   width: 10px;
@@ -224,16 +258,4 @@ body {
 
 :is(html, body, .welcome-box)::-webkit-scrollbar-thumb:hover{
   background: deeppink;
-}
-
-.box-label {
-  
-    color: white;
-    border-bottom: 1px solid hotpink;
-    padding: 1px;
-    margin-bottom: 3px;
-    text-align: center;
-    margin: auto;
-    padding: 3px;
-    -webkit-text-stroke: 2px hotpink;
 }
