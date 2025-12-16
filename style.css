@@ -230,6 +230,11 @@ body {
   width: 40px;
 }
 
+.box-feeling {
+  display: flex;
+  justify-content: center;
+}
+
 /* this is a crime against humanity */
 .status-content {
   height: 80px;
@@ -242,21 +247,57 @@ body {
 }
 /* this is a crime against humanity */
 
-:is(html, body, .welcome-box)::-webkit-scrollbar {
+.pet-box{
+  position: relative;   /* THIS is the magic for puppy1/2 */
+  width: 700px;         /* pick what fits your layout */
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* keep your pet iframe area neat */
+.pet{
+  padding: 5px;
+}
+
+/* your puppies now position relative to .pet-box */
+.puppy1{
+  position: absolute;
+  left: 250px;
+  top: 40px;
+}
+
+.puppy2{
+  position: absolute;
+  left: 500px;
+  top: -120px;
+}
+
+/* optional: beds styling */
+.pet-bed{
+  height: 100px;
+  cursor: grab;
+  display: block;
+}
+
+.pet-bed-top{ margin-bottom: 10px; }
+.pet-bed-bottom{ margin-top: 10px; }
+
+
+:is(html, body, .welcome-box, .status-content)::-webkit-scrollbar {
   width: 10px;
 }
 
-:is(html, body, .welcome-box)::-webkit-scrollbar-track{
+:is(html, body, .welcome-box, .status-content)::-webkit-scrollbar-track{
   background: rgba(255, 192, 203, 0.3);
   border: 1px solid hotpink;
 }
 
-:is(html, body, .welcome-box)::-webkit-scrollbar-thumb {
+:is(html, body, .welcome-box, .status-content)::-webkit-scrollbar-thumb {
   background: hotpink;
   border-radius: 10px;
   border: 2px solid pink;
 }
 
-:is(html, body, .welcome-box)::-webkit-scrollbar-thumb:hover{
+:is(html, body, .welcome-box, .status-content)::-webkit-scrollbar-thumb:hover{
   background: deeppink;
 }
