@@ -162,9 +162,19 @@ body {
   font-size: 16px;
 }
 
+.pet-box {
+  width: 314px;
+  height: 325px;
+}
+
 .blinkies-area,
 .stamp-area {
   min-height: 55px;
+}
+
+.blinkies-area {
+  background-image: url(https://64.media.tumblr.com/27ab06431863079d6e0598ec83810ad4/ab084ec4244aeedc-96/s250x400/3449ebf9ea36b532aad242aefd0307375ebfcf3d.gifv);
+  min-height: 20px;
 }
 
 .welcome-box {
@@ -246,41 +256,6 @@ body {
   overflow: auto;
 }
 /* this is a crime against humanity */
-
-.pet-box{
-  position: relative;   /* THIS is the magic for puppy1/2 */
-  width: 700px;         /* pick what fits your layout */
-  margin: 0 auto;
-  padding: 10px;
-}
-
-/* keep your pet iframe area neat */
-.pet{
-  padding: 5px;
-}
-
-/* your puppies now position relative to .pet-box */
-.puppy1{
-  position: absolute;
-  left: 250px;
-  top: 40px;
-}
-
-.puppy2{
-  position: absolute;
-  left: 500px;
-  top: -120px;
-}
-
-/* optional: beds styling */
-.pet-bed{
-  height: 100px;
-  cursor: grab;
-  display: block;
-}
-
-.pet-bed-top{ margin-bottom: 10px; }
-.pet-bed-bottom{ margin-top: 10px; }
 
 
 :is(html, body, .welcome-box, .status-content)::-webkit-scrollbar {
