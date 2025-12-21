@@ -128,19 +128,21 @@ body {
     margin-top: -520px;
     gap: 10px;
 
-    grid-template-columns: 280px 160px 160px;
+    grid-template-columns: 280px 160px 160px 160px;
     grid-template-areas: 
-    "welcomebox statsbox statsbox"
-    "blinkies blinkies blinkies"
-    "infodump linkmebox calendar"
-    "stamp stamp stamp"
-    "petbox musicplayer rightmostbox";
+    "welcomebox statsbox statsbox statsbox"
+    "blinkies blinkies blinkies blinkies"
+    "infodump linkmebox calendar calendar"
+    "infodump  linkmeimage calendar  calendar"
+    "stamp stamp stamp stamp"
+    "petbox musicplayer rightmostbox rightmostbox";
 }
 .welcome-box  { grid-area: welcomebox; }
 .stats-box    { grid-area: statsbox; }
 .blinkies-area{ grid-area: blinkies; }
 .pet-box      { grid-area: petbox; }
 .linkme-box   { grid-area: linkmebox; }
+.linkme-image { grid-area: linkmeimage}
 .calendar    { grid-area: calendar; }
 .stamp-area   { grid-area: stamp; }
 .info-dump    { grid-area: infodump; }
@@ -175,6 +177,8 @@ body {
 .blinkies-area {
   background-image: url(https://64.media.tumblr.com/27ab06431863079d6e0598ec83810ad4/ab084ec4244aeedc-96/s250x400/3449ebf9ea36b532aad242aefd0307375ebfcf3d.gifv);
   min-height: 20px;
+  height: 20px;
+  max-width: 616px;
 }
 
 .welcome-box {
@@ -259,18 +263,45 @@ body {
 /* this is a crime against humanity */
 
 .info-dump {
-  width: 300px;
+  width: 280px;
   height: 235px;
   overflow:scroll;
   text-align: center;
   overflow-x: hidden;
 }
 
+.linkme-box {
+  position: relative;
+  margin-left: 10px;
+  width: 120px;
+  min-height: 105px;
+  height: 105px;
+  z-index: 1;
+}
+
+.linkme-image {
+ position: relative;
+  margin-left: -10px;
+  width: 120px;
+  height: 120px;
+  justify-self: center;
+  align-self: start;
+  z-index: 0;
+}
+
 .calendar {
-  margin-left: 25px;
-  width: 130px;
+  margin-left: -20px;
+  width: 180px;
   height: 235px;
 }
+
+.calendar-iframe {
+  width: 100%;
+  height: 180px;
+  border: none;
+  overflow: hidden;
+}
+
 
 .stamp-area {
   margin-left: -160px;
