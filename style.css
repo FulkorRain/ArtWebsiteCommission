@@ -132,27 +132,28 @@ body {
     grid-template-areas: 
     "welcomebox statsbox statsbox"
     "blinkies blinkies blinkies"
-    "petbox linkmebox chatbox"
+    "infodump linkmebox calendar"
     "stamp stamp stamp"
-    "tinyimage musicplayer rightmostbox";
+    "petbox musicplayer rightmostbox";
 }
 .welcome-box  { grid-area: welcomebox; }
 .stats-box    { grid-area: statsbox; }
 .blinkies-area{ grid-area: blinkies; }
 .pet-box      { grid-area: petbox; }
 .linkme-box   { grid-area: linkmebox; }
-.chat-box     { grid-area: chatbox; }
+.calendar    { grid-area: calendar; }
 .stamp-area   { grid-area: stamp; }
-.tiny-img     { grid-area: tinyimage; }
+.info-dump    { grid-area: infodump; }
 .music-player { grid-area: musicplayer; }
 .rightmost-box{ grid-area: rightmostbox; }
 
 .welcome-box,
+.info-dump,
 .stats-box,
 .blinkies-area,
 .pet-box,
 .linkme-box,
-.chat-box,
+.calendar,
 .stamp-area,
 .music-player,
 .rightmost-box {
@@ -167,7 +168,6 @@ body {
   height: 325px;
 }
 
-.blinkies-area,
 .stamp-area {
   min-height: 55px;
 }
@@ -258,22 +258,40 @@ body {
 }
 /* this is a crime against humanity */
 
+.info-dump {
+  width: 300px;
+  height: 235px;
+  overflow:scroll;
+  text-align: center;
+  overflow-x: hidden;
+}
 
-:is(html, body, .welcome-box, .status-content)::-webkit-scrollbar {
+.calendar {
+  margin-left: 25px;
+  width: 130px;
+  height: 235px;
+}
+
+.stamp-area {
+  margin-left: -160px;
+  width: 780px;
+}
+
+:is(html, body, .welcome-box, .status-content, .info-dump)::-webkit-scrollbar {
   width: 10px;
 }
 
-:is(html, body, .welcome-box, .status-content)::-webkit-scrollbar-track{
+:is(html, body, .welcome-box, .status-content, .info-dump)::-webkit-scrollbar-track{
   background: rgba(255, 192, 203, 0.3);
   border: 1px solid hotpink;
 }
 
-:is(html, body, .welcome-box, .status-content)::-webkit-scrollbar-thumb {
+:is(html, body, .welcome-box, .status-content, .info-dump)::-webkit-scrollbar-thumb {
   background: hotpink;
   border-radius: 10px;
   border: 2px solid pink;
 }
 
-:is(html, body, .welcome-box, .status-content)::-webkit-scrollbar-thumb:hover{
+:is(html, body, .welcome-box, .status-content, .info-dump)::-webkit-scrollbar-thumb:hover{
   background: deeppink;
 }
