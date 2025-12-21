@@ -289,6 +289,16 @@ body {
   z-index: 0;
 }
 
+.linkme-button{
+  margin-left: 10px;
+}
+
+.linkme-button img {
+  width: 88px;
+  height: auto;
+}
+
+
 .calendar {
   margin-left: -20px;
   width: 180px;
