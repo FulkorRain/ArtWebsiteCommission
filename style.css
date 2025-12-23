@@ -265,9 +265,13 @@ body {
 .info-dump {
   width: 280px;
   height: 235px;
-  overflow:scroll;
+  overflow: auto;
   text-align: center;
-  overflow-x: hidden;
+  
+}
+
+.info-dump-paragraph-divider {
+  border-top: 2px solid hotpink;
 }
 
 .linkme-box {
