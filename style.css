@@ -134,41 +134,32 @@ body {
     "blinkies blinkies blinkies blinkies"
     "infodump linkmebox calendar calendar"
     "infodump  linkmeimage calendar  calendar"
-    "stamp stamp stamp stamp"
-    ". petbox . musicplayer"
-    ". . . .";
+    "stamp stamp stamp stamp";
 }
 .welcome-box  { grid-area: welcomebox; }
 .stats-box    { grid-area: statsbox; }
 .blinkies-area{ grid-area: blinkies; }
-.pet-box      { grid-area: petbox; }
 .linkme-box   { grid-area: linkmebox; }
 .linkme-image { grid-area: linkmeimage}
 .calendar    { grid-area: calendar; }
 .stamp-area   { grid-area: stamp; }
 .info-dump    { grid-area: infodump; }
-.music-player { grid-area: musicplayer; }
-.rightmost-box{ grid-area: rightmostbox; }
+/* .music-player { grid-area: musicplayer; }
+.placeholderone { grid-area: placeholderone; }
+.toybox { grid-area: toybox; }
+.placeholdertwo { grid-area: placeholdertwo; } */
 
 .welcome-box,
 .info-dump,
 .stats-box,
 .blinkies-area,
-.pet-box,
 .linkme-box,
 .calendar,
-.stamp-area,
-.music-player,
-.rightmost-box {
+.stamp-area {
   min-height: 120px;
   border: 2px solid hotpink;
   background: rgba(255,255,255,0.7);
   font-size: 16px;
-}
-
-.pet-box {
-  width: 314px;
-  height: 325px;
 }
 
 .stamp-area {
@@ -371,6 +362,38 @@ body {
 
 .marquee:hover .marquee__inner {
   animation-play-state: paused;
+}
+
+
+.grid-container-two {
+    display: grid;
+    /* margin-left: 160px;
+    margin-top: -520px; */
+    gap: 10px;
+
+    grid-template-columns: 280px 160px 160px;
+    grid-template-areas: 
+    "placeholderone petbox musicplayer"
+    "toybox . placeholdertwo";
+}
+
+.pet-box { grid-area: petbox; }
+.music-player { grid-area: musicplayer; }
+.placeholderone { grid-area: placeholderone; }
+.toybox { grid-area: toybox; }
+.placeholdertwo { grid-area: placeholdertwo; }
+
+.toybox,
+.music-player {
+  min-height: 120px;
+  border: 2px solid hotpink;
+  background: rgba(255,255,255,0.7);
+  font-size: 16px;
+}
+
+.pet-box {
+  width: 314px;
+  height: 325px;
 }
 
 :is(html, body, .welcome-box, .status-content, .info-dump)::-webkit-scrollbar {
