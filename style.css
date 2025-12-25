@@ -314,6 +314,7 @@ body {
 .stamp-area {
   margin-left: -160px;
   width: 780px;
+  margin-bottom: 10px;
 }
 
 /* viewport */
@@ -392,8 +393,25 @@ body {
 }
 
 .pet-box {
+  margin-left: -150px;
   width: 314px;
   height: 325px;
+}
+
+.music-player {
+  width: 314px;
+  height: 318px;
+}
+
+.toybox {
+  width: 150px;
+  height: 200px;
+}
+
+.placeholdertwo {
+
+  width: 314px;
+  height: 125px;
 }
 
 :is(html, body, .welcome-box, .status-content, .info-dump)::-webkit-scrollbar {
