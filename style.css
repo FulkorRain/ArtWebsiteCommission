@@ -58,6 +58,7 @@ body {
 }
 
 .sippy-img {
+  margin-top: 25px;
   background-image: url("https://file.garden/aStH4SBKNTw4mZIY/Sippy%20bed%20png");
 }
 
@@ -66,6 +67,8 @@ body {
 }
 
 .woofers-img {
+  margin-left: 10px;
+  margin-top: -25px;
   background-image: url("https://file.garden/aStH4SBKNTw4mZIY/Woofers%20bed%20png");
 }
 
@@ -200,7 +203,6 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  margin-top: -17px;
 
   width: 335px;
   height: auto;
@@ -268,7 +270,7 @@ body {
 }
 
 .info-dump-paragraph-divider {
-  border-top: 2px solid hotpink;
+  
 }
 
 .linkme-box {
@@ -407,8 +409,9 @@ body {
 }
 
 .toybox {
-  width: 150px;
+  width: 125px;
   height: 200px;
+  margin-top: -220px;
 }
 
 .placeholdertwo {
