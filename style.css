@@ -54,6 +54,7 @@ body {
   background-position: center;
   width: 100px;
   height: 100px;
+  transform: scale(1.15)
 }
 
 .sippy-img {
@@ -100,6 +101,7 @@ body {
 
 .link-button-bone {
     background-image: url("https://file.garden/aStH4SBKNTw4mZIY/Bone%20button");
+    margin-top: 5px;
     width: 120px;
     height: 42px; /* this is so stupid, it needs this specific size for some reason */
     background-size: cover;
@@ -191,6 +193,7 @@ body {
 
 .welcome-gif {
   margin-left: 15px;
+  margin-top: 15px;
 }
 
 .welcome-lace {
