@@ -42,7 +42,7 @@ body {
     margin: 0 auto;
     padding: 7px;
     color: var(--text-color);
-    background-image: url("https://files.catbox.moe/s7ayh4.gif");
+    background-image: url("assets/gifs/background.gif");
     border: 3px double hotpink;
     border-top: none;
 }
@@ -59,6 +59,7 @@ body {
 
 .sippy-img {
   margin-top: 25px;
+  margin-bottom: 5px;
   background-image: url("https://file.garden/aStH4SBKNTw4mZIY/Sippy%20bed%20png");
 }
 
@@ -68,7 +69,7 @@ body {
 
 .woofers-img {
   margin-left: 10px;
-  margin-top: -25px;
+  margin-top: -20px;
   background-image: url("https://file.garden/aStH4SBKNTw4mZIY/Woofers%20bed%20png");
 }
 
@@ -78,6 +79,7 @@ body {
 
 
 .link-box {
+    margin-top: -20px;
     padding-left: 20px;
     display: grid;
     grid-template-columns: 1fr;
@@ -130,7 +132,7 @@ body {
 .grid-container {
     display: grid;
     margin-left: 160px;
-    margin-top: -520px;
+    margin-top: -510px;
     gap: 10px;
 
     grid-template-columns: 280px 160px 160px 160px;
