@@ -203,6 +203,7 @@ body {
 
 .welcome-lace {
   position: sticky;
+  margin-top: -20px;
   top: 0;
   left: 0;
 
@@ -271,8 +272,8 @@ body {
   
 }
 
-.info-dump-paragraph-divider {
-  
+.info-lace {
+  position:sticky;
 }
 
 .linkme-box {
