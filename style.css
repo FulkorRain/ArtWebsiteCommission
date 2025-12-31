@@ -174,9 +174,8 @@ body {
 }
 
 .blinkies-area {
-  background-image: url(https://64.media.tumblr.com/27ab06431863079d6e0598ec83810ad4/ab084ec4244aeedc-96/s250x400/3449ebf9ea36b532aad242aefd0307375ebfcf3d.gifv);
-  min-height: 20px;
-  height: 20px;
+  min-height: 68px;
+  height: 68px;
   max-width: 616px;
 }
 
@@ -372,6 +371,55 @@ body {
 .marquee:hover .marquee__inner {
   animation-play-state: paused;
 }
+
+/* viewport for blinkies*/
+.marquee-blinkies {
+  height: 68px;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+
+  background-color: #d4f1f4;
+  background-image: url(https://foollovers.com/mat/slantstripe02/ib04-bg-slantstripe.gif);
+  background-repeat: repeat;
+  background-size: 2em;
+  border: 2px ridge #f79dc4c7;
+}
+
+/* animated conveyor belt */
+.marquee__inner-blinkies {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll-blinkies 25s linear infinite;
+}
+
+/* stamp rows */
+.marquee__content-blinkies {
+  display: flex;
+  align-items: center;
+}
+
+.marquee-blinkies img {
+  height: 60px;
+  width: auto;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+/* animation */
+@keyframes marquee-scroll-blinkies {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.marquee-blinkies:hover .marquee__inner-blinkies {
+  animation-play-state: paused;
+}
+
 
 
 .grid-container-two {
