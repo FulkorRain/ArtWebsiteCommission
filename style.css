@@ -212,6 +212,16 @@ body {
   pointer-events: none;
 }
 
+.welcome-divider {
+  margin-top: -10px;
+  top: 0;
+  left: 0;
+
+  width: 392px;
+  height: auto;
+
+  pointer-events: none;
+}
 
 .stats-box {
   width: 250px;
