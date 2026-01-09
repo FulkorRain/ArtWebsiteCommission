@@ -441,7 +441,8 @@ body {
     grid-template-columns: 280px 160px 160px;
     grid-template-areas: 
     "placeholderone petbox musicplayer"
-    "toybox . placeholdertwo";
+    "toybox copyright-text placeholdertwo"
+    "placeholderthree . .";
 }
 
 .pet-box { grid-area: petbox; }
@@ -449,6 +450,8 @@ body {
 .placeholderone { grid-area: placeholderone; }
 .toybox { grid-area: toybox; }
 .placeholdertwo { grid-area: placeholdertwo; }
+.copyright-text { grid-area: copyright-text; }
+.placeholderthree { grid-area: placeholderthree}
 
 .toybox,
 .music-player {
@@ -479,6 +482,14 @@ body {
 
   width: 314px;
   height: 125px;
+}
+
+.copyright-text {
+  margin-left: -60px;
+}
+
+.placeholderthree {
+  margin-top: -150px;
 }
 
 :is(html, body, .welcome-box, .status-content, .info-dump)::-webkit-scrollbar {
