@@ -493,6 +493,24 @@ body {
   margin-top: -150px;
 }
 
+.progress-container {
+  background-color: #444; /* Dark gray so the light bar pops */
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  height: 8px; /* Must have a height! */
+  width: 100%;
+}
+
+/* The actual moving part */
+.progress {
+  background-color: #00ffcc; /* Neon cyan for that high-energy vibe */
+  border-radius: 5px;
+  height: 100%; /* Fill the container's height */
+  width: 0%; /* Starts at 0 */
+  transition: width 0.1s linear; /* Makes the movement smooth */
+}
+
 :is(html, body, .welcome-box, .status-content, .info-dump)::-webkit-scrollbar {
   width: 10px;
 }

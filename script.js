@@ -5,3 +5,36 @@ function copyLink() {
 
   navigator.clipboard.writeText(code);
 }
+
+const track = document.getElementById('audio');
+const playButton = document.getElementById('play');
+const progress = document.getElementById('progress');
+
+let isPlaying = false;
+
+function togglePlay() {
+  if (isPlaying)
+    pauseSong();
+  else
+    playSong();
+}
+
+function playSong() {
+  isPlaying = true;
+  playButton.innerText = '⏸️';
+  track.play();
+}
+
+function pauseSong() {
+  isPlaying = false;
+  playButton.innerText = '▶️';
+  track.pause();
+}
+
+playButton.addEventListener('click', togglePlay);
+
+track.addEventListener('timeupdate', (e) => {
+    const { duration, currentTime } = e.srcElement;
+    const progressPercent = (currentTime / duration) * 100;
+    progress.style.width = `${progressPercent}%`;
+});
