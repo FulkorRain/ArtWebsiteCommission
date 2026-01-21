@@ -233,6 +233,7 @@ body {
 .box-label {
   
     color: white;
+    font-family: prili;
     border-bottom: 1px solid hotpink;
     padding: 1px;
     margin-bottom: 3px;
