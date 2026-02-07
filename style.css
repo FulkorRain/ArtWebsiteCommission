@@ -179,9 +179,12 @@ body {
 }
 
 .blinkies-area {
-  min-height: 68px;
-  height: 68px;
+  min-height: 40px;
+  height: 40px;
   max-width: 616px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .welcome-box {
@@ -390,7 +393,7 @@ body {
 
 /* viewport for blinkies*/
 .marquee-blinkies {
-  height: 68px;
+  height: 40px;
   overflow: hidden;
   position: relative;
   white-space: nowrap;
@@ -400,6 +403,9 @@ body {
   background-repeat: repeat;
   background-size: 2em;
   border: 2px ridge #f79dc4c7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* animated conveyor belt */
@@ -416,7 +422,7 @@ body {
 }
 
 .marquee-blinkies img {
-  height: 60px;
+  height: 32px;
   width: auto;
   margin-right: 8px;
   flex-shrink: 0;
