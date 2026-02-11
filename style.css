@@ -179,8 +179,8 @@ body {
 }
 
 .blinkies-area {
-  min-height: 40px;
-  height: 40px;
+  min-height: 32px;
+  height: 32px;
   max-width: 616px;
   display: flex;
   justify-content: center;
@@ -393,7 +393,7 @@ body {
 
 /* viewport for blinkies*/
 .marquee-blinkies {
-  height: 40px;
+  height: 32px;
   overflow: hidden;
   position: relative;
   white-space: nowrap;
@@ -422,7 +422,7 @@ body {
 }
 
 .marquee-blinkies img {
-  height: 32px;
+  height: 24px;
   width: auto;
   margin-right: 8px;
   flex-shrink: 0;
