@@ -53,7 +53,7 @@ body {
     height: 24px;
     /* Start */
     color: hotpink;
-    font-family: Floozy;
+    font-family: "MS UI Gothic", "MS PGothic", "MS Gothic", sans-serif;
     border-bottom: 1px solid hotpink;
     margin-bottom: 3px;
     text-align: center;
@@ -71,7 +71,7 @@ body {
     align-items: center;
     margin: 0px 3.7px;
     position: relative;
-    font-family: Floozy;
+    font-family: "MS UI Gothic", "MS PGothic", "MS Gothic", sans-serif;
 }
 
 .calendar-widget .month-label::before {
