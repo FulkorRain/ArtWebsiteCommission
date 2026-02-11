@@ -327,6 +327,7 @@ body {
   margin-left: -20px;
   width: 180px;
   height: 235px;
+  text-align: center;
 }
 
 .calendar-iframe {
