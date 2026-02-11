@@ -1,67 +1,92 @@
-/* -------------------------------------- BODY */
+@font-face {
+  font-family: 'Floozy';
+  src: url(assets/fonts/Floozy__.ttf)
+}
+
 body {
-    flex-direction: column;
     margin: 0;
-    overflow: hidden;
+    font-family: sans-serif;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
-
-/* -------------------------------------- TABLE */
-table {
+.calendar-widget {
     border: 0;
-    background: none;
+    background: white;
     border-spacing: 3px;
+    border-collapse: separate;
+    margin: 0;
+    color: black;
+    background: linear-gradient(180deg, #ffb3ba 0%, #ffdfba 20%, #ffffba 40%, #baffc9 60%, #bae1ff 80%, #eecbff 100%);
+
 }
 
-td {
+.calendar-widget td {
     text-align: center;
-    min-width: 21.3px;
+    width: 21.3px;
     padding: 4.5px 0px;
     font-size: 11px;
     text-transform: uppercase;
     border-radius: 2px;
-    background: linear-gradient(to bottom, #fefdfa 0%, #fffbf4 50%, #faf1e6 51%, #fffcf7 100%);
+    cursor: default;
+    background-color: white;
+    border: 1px solid hotpink;
+    color:hotpink;
 }
 
-/* -------------------------------------- week */
-.week-1, .week-2, .week-3, .week-4, .week-5, .week-6, .week-7 {
-    background: linear-gradient(to bottom,  rgba(252,249,248,1) 0%,rgba(248,230,228,1) 50%,rgba(247,219,215,1) 51%,rgba(253,243,241,1) 100%);
+.calendar-widget td a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.calendar-widget .week-day {
+    background: #fff;
     font-weight: bold;
     font-size: 8px;
+    border: 1px solid #ddd;
 }
 
-/* -------------------------------------- month */
-.month {
-    letter-spacing: 3.2px;
-    background: linear-gradient(to bottom, rgba(246, 247, 243, 1) 0%, rgba(225, 230, 206, 1) 50%, rgb(213 221 186) 51%, rgba(242, 245, 231, 1) 100%);
-    padding: 1.9px 0px;
-    height: 21px;
+.calendar-widget .month-header {
+    letter-spacing: 2px;
+    padding: 4px 0px;
+    height: 24px;
+    /* Start */
+    color: hotpink;
+    font-family: Floozy;
+    border-bottom: 1px solid hotpink;
+    margin-bottom: 3px;
+    text-align: center;
+    margin: auto;
+    padding: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    
+    background: linear-gradient(white, white 50%, white 50%, #ffb6da);
 }
 
-.month strong {
-    color: white;
-    text-shadow: var(--shad1);
-    font-size: 10px;
-}
-
-.month center {
+.calendar-widget .month-label {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin: 0px 3.7px;
+    position: relative;
+    font-family: Floozy;
 }
 
-.month center::before {
-    content: url(/graphics/icons/NC-icon11.gif);
+.calendar-widget .month-label::before {
+    content: url('/graphics/icons/NC-icon11.gif');
     filter: saturate(0.5) hue-rotate(14deg) contrast(1.2);
+    margin-right: 5px;
+    vertical-align: middle;
 }
 
-/* -------------------------------------- date */
+.calendar-widget td:has(.current-date) {
+    background: white;
+    border: 1px solid red;
+}
 
-td:has(.date) {
-    background: linear-gradient(to bottom,  #fcfbf8 0%,#faf0e0 50%,#f8e9d2 51%,#fef8ee 100%);
-    text-indent: -0.5px;
+.calendar-widget .current-date {
+    color: #FF0000;
+    font-weight: bold;
 }
