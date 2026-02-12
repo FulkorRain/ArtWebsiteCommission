@@ -330,6 +330,10 @@ body {
   text-align: center;
 }
 
+.clock-container {
+  display: flex;
+}
+
 .calendar-iframe {
   width: 100%;
   height: 180px;
