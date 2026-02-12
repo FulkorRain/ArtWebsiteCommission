@@ -420,7 +420,7 @@ body {
 .marquee__inner-blinkies {
   display: flex;
   width: max-content;
-  animation: marquee-scroll-blinkies 25s linear infinite;
+  animation: marquee-scroll-blinkies 50s linear infinite;
 }
 
 /* stamp rows */
