@@ -30,13 +30,13 @@ function togglePlay() {
 
 function playSong() {
   isPlaying = true;
-  playButton.innerText = '⏸️';
+  playButton.classList.add("is-playing");
   track.play();
 }
 
 function pauseSong() {
   isPlaying = false;
-  playButton.innerText = '▶️';
+  playButton.classList.remove("is-playing");
   track.pause();
 }
 

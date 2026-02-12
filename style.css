@@ -544,6 +544,22 @@ body {
   transition: width 0.1s linear; /* Makes the movement smooth */
 }
 
+.action-button {
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+#prev { background-image: url("assets/images/Back.png"); }
+#play { background-image: url("assets/images/Play.png"); }
+#next { background-image: url("assets/images/Forward.png"); }
+#play.is-playing { background-image: url("assets/images/Pause.png"); }
+
 :is(html, body, .welcome-box, .status-content, .info-dump)::-webkit-scrollbar {
   width: 10px;
 }
