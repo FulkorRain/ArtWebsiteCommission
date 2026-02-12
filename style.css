@@ -510,7 +510,13 @@ body {
 
 .placeholderthree {
   margin-top: -150px;
+  transition: 0.2 ease;
 }
+
+.placeholderthree:hover {
+  transform: scale(1.05);
+}
+
 
 .progress-container {
   background-color: #444; /* Dark gray so the light bar pops */
