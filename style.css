@@ -332,6 +332,9 @@ body {
 
 .clock-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .calendar-iframe {
