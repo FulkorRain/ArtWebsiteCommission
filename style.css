@@ -518,6 +518,13 @@ body {
   transform: scale(1.05);
 }
 
+.music-video {
+  aspect-ratio: 16 / 9;
+  max-width: 230px;
+  background-color: green;
+  border: 2px solid palegreen;
+}
+
 
 .progress-container {
   background-color: #444; /* Dark gray so the light bar pops */
