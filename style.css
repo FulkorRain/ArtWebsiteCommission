@@ -490,6 +490,7 @@ body {
 .music-player {
   width: 314px;
   height: 318px;
+  overflow: hidden;
 }
 
 .toybox {
