@@ -546,23 +546,22 @@ body {
 }
 
 .progress-container {
-  background-color: #444; /* Dark gray so the light bar pops */
+  background-color: rgb(116, 45, 80); 
   border-radius: 5px;
   cursor: pointer;
   margin: 10px 0;
-  height: 8px; /* Must have a height! */
+  height: 8px; 
   width: 85%;
   flex-shrink: 0;
   align-self: center;
 }
 
-/* The actual moving part */
 .progress {
-  background-color: #00ffcc; /* Neon cyan for that high-energy vibe */
+  background-color: hotpink; 
   border-radius: 5px;
-  height: 100%; /* Fill the container's height */
-  width: 0%; /* Starts at 0 */
-  transition: width 0.1s linear; /* Makes the movement smooth */
+  height: 100%;
+  width: 0%; 
+  transition: width 0.1s linear; 
   flex-shrink: 0;
 }
 
