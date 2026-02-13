@@ -15,6 +15,20 @@ function copyLink() {
   navigator.clipboard.writeText(code);
 }
 
+// Button press sounds
+const buttonAudio = new Audio("assets/audio/click_sound.mp3");
+const buttons = document.querySelectorAll(".action-button");
+
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    buttonAudio.currentTime = 0;
+    buttonAudio.play().catch(error => {
+      console.error("Audio play failed:", error);
+    });
+  });
+});
+// Button press sounds
+
 const track = document.getElementById('audio');
 const playButton = document.getElementById('play');
 const progress = document.getElementById('progress');
