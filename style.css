@@ -206,10 +206,8 @@ body {
 .welcome-gif {
   margin-left: 15px;
   margin-top: 15px;
-  /* width: 196px;
-  height: 108px; */
-  /* width: 245px;
-  height: 135px; */
+  width: 245px;
+  height: 135px;
 }
 
 .welcome-lace {
