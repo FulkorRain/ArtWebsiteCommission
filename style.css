@@ -490,12 +490,6 @@ body {
   height: 325px;
 }
 
-.music-player {
-  width: 314px;
-  height: 318px;
-  overflow: hidden;
-}
-
 .toybox {
   width: 125px;
   height: 200px;
@@ -521,13 +515,35 @@ body {
   transform: scale(1.05);
 }
 
-.music-video {
-  aspect-ratio: 16 / 9;
-  max-width: 230px;
-  background-color: green;
-  border: 2px solid palegreen;
+.music-player {
+  width: 314px;
+  height: 318px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  
 }
 
+.music-video {
+  margin-top: 5px;
+  aspect-ratio: 16 / 9;
+  width: 90%;
+  max-width: 256px;
+  background-color: green;
+  border: 2px solid palegreen;
+  align-self: center;
+  margin-bottom: -15px;
+}
+
+.music-track-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.track-name {
+  margin-bottom: -15px;
+}
 
 .progress-container {
   background-color: #444; /* Dark gray so the light bar pops */
@@ -535,7 +551,9 @@ body {
   cursor: pointer;
   margin: 10px 0;
   height: 8px; /* Must have a height! */
-  width: 100%;
+  width: 85%;
+  flex-shrink: 0;
+  align-self: center;
 }
 
 /* The actual moving part */
@@ -545,6 +563,11 @@ body {
   height: 100%; /* Fill the container's height */
   width: 0%; /* Starts at 0 */
   transition: width 0.1s linear; /* Makes the movement smooth */
+  flex-shrink: 0;
+}
+
+.controls {
+  align-self: center;
 }
 
 .action-button {
@@ -556,6 +579,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+  
 }
 
 #prev { background-image: url("assets/images/Back.png"); }
