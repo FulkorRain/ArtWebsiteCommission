@@ -29,6 +29,9 @@ buttons.forEach(button => {
 });
 // Button press sounds
 
+const songs = ["music_1.mp3","music_2.mp3","music_3.mp3","music_4.mp3"];
+const songIndex = 0;
+
 const track = document.getElementById('audio');
 const playButton = document.getElementById('play');
 const progress = document.getElementById('progress');
