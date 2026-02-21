@@ -29,38 +29,75 @@ buttons.forEach(button => {
 });
 // Button press sounds
 
-const songs = ["music_1.mp3","music_2.mp3","music_3.mp3","music_4.mp3"];
-const songIndex = 0;
+// #info song-name (both in file and what appears on the music box)
+const songs = ["Crystal Strawberry Garden", "Maid Sama OST", "Maid Sama OST 2", "drops."];
+// #info song-name (both in file and what appears on the music box)
+
+// #info song-credits (in order)
+const songCredits = ["Hello Kitty Dream Village", "Net idol AOI", "Misaki Junchou theme", "Elements Garden"]
+// #info song-credits (in order)
+
+let songIndex = 0;
 
 const track = document.getElementById('audio');
 const playButton = document.getElementById('play');
+const nextButton = document.getElementById('next');
+const prevButton = document.getElementById('prev');
 const progress = document.getElementById('progress');
+const title = document.querySelector('.track-name');
+const credits = document.querySelector('.track-credits');
 
-let isPlaying = false;
+loadSong(songs[songIndex]);
+
+function loadSong(song) {
+  title.innerText = song.replace('_', ' ');
+  credits.innerText = songCredits[songIndex];
+  track.src = `assets/audio/${song}.mp3`;
+}
+
 
 function togglePlay() {
-  if (isPlaying)
-    pauseSong();
-  else
-    playSong();
+  const isPlaying = playButton.classList.contains('is-playing');
+  if (isPlaying) pauseSong();
+  else playSong();
 }
 
 function playSong() {
-  isPlaying = true;
   playButton.classList.add("is-playing");
   track.play();
 }
 
 function pauseSong() {
-  isPlaying = false;
   playButton.classList.remove("is-playing");
   track.pause();
 }
 
+function nextSong() {
+  songIndex++;
+  if (songIndex > songs.length - 1) songIndex = 0;
+  loadSong(songs[songIndex]);
+  playSong();
+}
+
+function prevSong() {
+  songIndex--;
+  if (songIndex < 0) songIndex = songs.length - 1;
+  loadSong(songs[songIndex]);
+  playSong();
+}
+
+
 playButton.addEventListener('click', togglePlay);
+nextButton.addEventListener('click', nextSong);
+prevButton.addEventListener('click', prevSong);
+
 
 track.addEventListener('timeupdate', (e) => {
-    const { duration, currentTime } = e.srcElement;
+  const { duration, currentTime } = e.srcElement;
+  if (duration) {
     const progressPercent = (currentTime / duration) * 100;
     progress.style.width = `${progressPercent}%`;
+  }
 });
+
+track.addEventListener('ended', nextSong);
