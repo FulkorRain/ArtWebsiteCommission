@@ -101,3 +101,9 @@ track.addEventListener('timeupdate', (e) => {
 });
 
 track.addEventListener('ended', nextSong);
+
+const volumeSlider = document.getElementById('volume-slider');
+
+volumeSlider.addEventListener('input', (e) => {
+  track.volume = e.target.value;
+});

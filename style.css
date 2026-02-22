@@ -581,6 +581,15 @@ body {
   
 }
 
+
+#volume-slider {
+  accent-color: hotpink;
+  display: block;
+  width: 80px;
+  height: 8px;
+  margin-top: -25px;
+}
+
 #prev { background-image: url("assets/images/Back.png"); }
 #play { background-image: url("assets/images/Play.png"); }
 #next { background-image: url("assets/images/Forward.png"); }
