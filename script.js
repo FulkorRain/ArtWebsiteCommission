@@ -17,6 +17,7 @@ function copyLink() {
 
 // Button press sounds
 const buttonAudio = new Audio("assets/audio/click_sound.mp3");
+buttonAudio.volume = 0.2;
 const buttons = document.querySelectorAll(".action-button");
 
 buttons.forEach(button => {
