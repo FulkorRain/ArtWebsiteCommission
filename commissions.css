@@ -63,3 +63,24 @@ body {
 .header-image:hover {
     /* background-image: url("url"); */
 }
+
+.tos-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0;
+    gap: 0;
+    width: 350px;
+    height: 150px;
+    background: black;
+    border-radius: 5px;
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y:auto;
+}
+
+.tos-box h1, .tos-box p {
+    margin: 0;
+    padding: 5px 0;
+}
