@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'Floozy';
+  src: url(assets/fonts/Floozy__.ttf)
+}
+
+:root { 
+  --text-color: hotpink;
+  /* --text-color: #b07469; */
+}
+
+* {
+  cursor: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/58566fec-767c-4b43-9655-1d0cf69219fa/d5mznwj-ce70c2cf-8711-4ff8-8d77-bd661f084252.png), auto !important;
+  font-family: "MS UI Gothic", "MS PGothic", "MS Gothic", sans-serif;
+  
+}
+
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-image: url("https://f2.toyhou.se/file/f2-toyhou-se/images/110997028_uu3DcLwfIdXK6rc.jpg");
+  background-repeat: repeat;
+}
+
+.page {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.content {
+    height: 780px;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 7px;
+    color: var(--text-color);
+    background-image: url("assets/gifs/background.gif");
+    border: 3px double hotpink;
+}
