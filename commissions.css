@@ -43,3 +43,19 @@ body {
     background-image: url("assets/gifs/background.gif");
     border: 3px double hotpink;
 }
+
+.header-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+
+    /* background-image: url("url");
+    background-size: cover;
+    background-position: center; */
+
+    border: 4px solid #ff00ff;
+}
+
+.header-image:hover {
+    /* background-image: url("url"); */
+}
