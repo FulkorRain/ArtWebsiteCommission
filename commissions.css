@@ -44,7 +44,7 @@ body {
     margin: 0 auto;
     padding: 7px;
     color: var(--text-color);
-    background-image: url("assets/gifs/background.gif");
+    background: white;
     border: 3px double hotpink;
 }
 
@@ -86,5 +86,11 @@ body {
 }
 
 .return-button {
-    
+  background: hotpink;
+  color: white;
+  padding: 15px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
 }
