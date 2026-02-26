@@ -40,12 +40,13 @@ body {
     align-items: center;
     justify-content: center;
     height: 780px;
-    width: 1000px;
+    width: 780px;
     margin: 0 auto;
     padding: 7px;
     color: var(--text-color);
     background: white;
     border: 3px double hotpink;
+    gap: 20px;
 }
 
 .header-image {
