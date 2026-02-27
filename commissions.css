@@ -114,3 +114,23 @@ body {
 :is(html, body, .tos-box)::-webkit-scrollbar-thumb:hover{
   background: deeppink;
 }
+
+#sprinkle-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.sprinkle {
+  position: absolute;
+  top: -20px;
+  width: 12px;
+  height: 12px;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(720deg);
+  }
+}
