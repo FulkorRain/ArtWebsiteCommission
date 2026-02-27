@@ -95,3 +95,22 @@ body {
   text-align: center;
   display: inline-block;
 }
+
+:is(html, body, .tos-box)::-webkit-scrollbar {
+  width: 10px;
+}
+
+:is(html, body, .tos-box)::-webkit-scrollbar-track{
+  background: rgba(255, 192, 203, 0.3);
+  border: 1px solid hotpink;
+}
+
+:is(html, body, .tos-box)::-webkit-scrollbar-thumb {
+  background: hotpink;
+  border-radius: 10px;
+  border: 2px solid pink;
+}
+
+:is(html, body, .tos-box)::-webkit-scrollbar-thumb:hover{
+  background: deeppink;
+}
