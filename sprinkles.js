@@ -19,8 +19,25 @@ const particles = Array.from({length: 200}, () => ({
   img: images[Math.floor(Math.random() * images.length)]
 }));
 
+const trail = [];
+
+addEventListener("mousemove", e => {
+  for (let i = 0; i < 3; i++) {
+    trail.push({
+      x: e.clientX,
+      y: e.clientY,
+      vx: (Math.random() - 0.5) * 2,
+      vy: Math.random() * 2 + 1,
+      life: 1,
+      size: 8 + Math.random() * 6,
+      img: images[Math.floor(Math.random() * images.length)]
+    });
+  }
+});
+
 function loop() {
   ctx.clearRect(0,0,canvas.width,canvas.height);
+
 
   for (const p of particles) {
     p.y += p.speed;
@@ -32,6 +49,23 @@ function loop() {
 
     ctx.drawImage(p.img, p.x, p.y, 12, 12);
   }
+
+
+  for (let i = trail.length - 1; i >= 0; i--) {
+    const p = trail[i];
+
+    p.x += p.vx;
+    p.y += p.vy;
+    p.vy += 0.05;
+    p.life -= 0.03;
+
+    ctx.globalAlpha = p.life;
+    ctx.drawImage(p.img, p.x, p.y, p.size, p.size);
+
+    if (p.life <= 0) trail.splice(i, 1);
+  }
+
+  ctx.globalAlpha = 1;
 
   requestAnimationFrame(loop);
 }
