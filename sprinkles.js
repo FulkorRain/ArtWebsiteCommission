@@ -1,8 +1,14 @@
 const canvas = document.getElementById("c");
 const ctx = canvas.getContext("2d");
 
+const cursorcanvas = document.getElementById("cursor");
+const cursorctx = cursorcanvas.getContext("2d");
+
+
 canvas.width = innerWidth;
 canvas.height = innerHeight;
+cursorcanvas.width = innerWidth;
+cursorcanvas.height = innerHeight;
 
 const images = [];
 ["assets/images/Pink.png","assets/images/Green.png","assets/images/Orange.png","assets/images/Purple.png","assets/images/Yellow.png","assets/images/Blue.png"]
@@ -36,7 +42,9 @@ addEventListener("mousemove", e => {
 });
 
 function loop() {
-  ctx.clearRect(0,0,canvas.width,canvas.height);
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  cursorctx.clearRect(0, 0, cursorcanvas.width, cursorcanvas.height);
 
 
   for (const p of particles) {
@@ -50,7 +58,6 @@ function loop() {
     ctx.drawImage(p.img, p.x, p.y, 12, 12);
   }
 
-
   for (let i = trail.length - 1; i >= 0; i--) {
     const p = trail[i];
 
@@ -59,13 +66,16 @@ function loop() {
     p.vy += 0.05;
     p.life -= 0.03;
 
-    ctx.globalAlpha = p.life;
-    ctx.drawImage(p.img, p.x, p.y, p.size, p.size);
+
+    cursorctx.globalAlpha = p.life;
+    cursorctx.drawImage(p.img, p.x, p.y, p.size, p.size);
 
     if (p.life <= 0) trail.splice(i, 1);
   }
 
+
   ctx.globalAlpha = 1;
+  cursorctx.globalAlpha = 1;
 
   requestAnimationFrame(loop);
 }
