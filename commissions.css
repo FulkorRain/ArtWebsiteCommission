@@ -48,13 +48,13 @@ body {
     border: none; 
 
     box-shadow:
-        0 0 0 1px #ffadad,
-        0 0 0 2px #ffd6a5,
-        0 0 0 3px #fdffb6,
-        0 0 0 4px #caffbf,
-        0 0 0 5px #9bf6ff,
-        0 0 0 6px #a0c4ff,
-        0 0 0 7px #bdb2ff;
+        0 0 0 2px #ffadad,
+        0 0 0 4px #ffd6a5,
+        0 0 0 6px #fdffb6,
+        0 0 0 8px #caffbf,
+        0 0 0 10px #9bf6ff,
+        0 0 0 12px #a0c4ff,
+        0 0 0 14px #bdb2ff;
 
     gap: 20px;
     z-index: 2; 
