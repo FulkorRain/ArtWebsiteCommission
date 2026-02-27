@@ -74,7 +74,7 @@ body {
     gap: 0;
     width: 350px;
     height: 150px;
-    background: black;
+    background: #fcfbc6;
     border-radius: 5px;
     overflow: scroll;
     overflow-x: hidden;
@@ -122,5 +122,5 @@ body {
   height: 100vh;
 
   pointer-events: none; 
-  z-index: 9999;   
+  z-index: 2;   
 }
