@@ -47,6 +47,7 @@ body {
     background: white;
     border: 3px double hotpink;
     gap: 20px;
+    z-index: 2; 
 }
 
 .header-image {
