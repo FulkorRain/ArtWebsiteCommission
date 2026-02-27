@@ -45,7 +45,18 @@ body {
     padding: 7px;
     color: var(--text-color);
     background: white;
-    border: 3px double hotpink;
+    border: 6px solid;
+    border-image: linear-gradient(
+        45deg,
+        #ffadad,  /* pastel red */
+        #ffd6a5,  /* pastel orange */
+        #fdffb6,  /* pastel yellow */
+        #caffbf,  /* pastel lime */
+        #9bf6ff,  /* pastel cyan */
+        #a0c4ff,  /* pastel blue */
+        #bdb2ff   /* pastel violet */
+    ) 1;
+
     gap: 20px;
     z-index: 2; 
 }
