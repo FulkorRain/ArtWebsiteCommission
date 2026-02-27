@@ -80,7 +80,7 @@ body {
   text-align: center;
 }
 
-.commission-text h5, .commission-text p {
+.commission-text h3, .commission-text p {
     margin: 0;
     padding: 5px 0;
 }
@@ -104,6 +104,10 @@ body {
 .tos-box h2, .tos-box p {
     margin: 0;
     padding: 5px 0;
+}
+
+.tos-box h2 {
+    font-family: Floozy;
 }
 
 .return-button {
