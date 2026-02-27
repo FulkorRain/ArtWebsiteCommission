@@ -115,22 +115,12 @@ body {
   background: deeppink;
 }
 
-#sprinkle-container {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-}
+#c {
+  position: fixed;   /* detach from layout */
+  inset: 0;          /* top:0 left:0 right:0 bottom:0 */
+  width: 100vw;
+  height: 100vh;
 
-.sprinkle {
-  position: absolute;
-  top: -20px;
-  width: 12px;
-  height: 12px;
-  animation: fall linear forwards;
-}
-
-@keyframes fall {
-  to {
-    transform: translateY(110vh) rotate(720deg);
-  }
+  pointer-events: none; /* clicks pass through */
+  z-index: 9999;       /* above everything */
 }

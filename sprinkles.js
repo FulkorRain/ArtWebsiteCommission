@@ -1,31 +1,39 @@
-const images = [
-  "assets/images/Pink.png",
-  "assets/images/Green.png",
-  "assets/images/Orange.png",
-  "assets/images/Purple.png",
-  "assets/images/Yellow.png",
-  "assets/images/Blue.png"
-];
+const canvas = document.getElementById("c");
+const ctx = canvas.getContext("2d");
 
-const container = document.getElementById("sprinkle-container");
+canvas.width = innerWidth;
+canvas.height = innerHeight;
 
-function spawnSprinkle() {
-  const img = document.createElement("img");
+const images = [];
+["assets/images/Pink.png","assets/images/Green.png","assets/images/Orange.png","assets/images/Purple.png","assets/images/Yellow.png","assets/images/Blue.png"]
+  .forEach(src => {
+    const img = new Image();
+    img.src = src;
+    images.push(img);
+  });
 
-  img.src = images[Math.floor(Math.random() * images.length)];
-  img.className = "sprinkle";
+const particles = Array.from({length: 200}, () => ({
+  x: Math.random() * canvas.width,
+  y: Math.random() * canvas.height,
+  speed: 2 + Math.random() * 3,
+  img: images[Math.floor(Math.random() * images.length)]
+}));
 
-  img.style.left = Math.random() * window.innerWidth + "px";
+function loop() {
+  ctx.clearRect(0,0,canvas.width,canvas.height);
 
-  const size = 8 + Math.random() * 10;
-  img.style.width = size + "px";
+  for (const p of particles) {
+    p.y += p.speed;
 
-  const duration = 2 + Math.random() * 4;
-  img.style.animationDuration = duration + "s";
+    if (p.y > canvas.height) {
+      p.y = -20;
+      p.x = Math.random() * canvas.width;
+    }
 
-  container.appendChild(img);
+    ctx.drawImage(p.img, p.x, p.y, 12, 12);
+  }
 
-  setTimeout(() => img.remove(), duration * 1000);
+  requestAnimationFrame(loop);
 }
 
-setInterval(spawnSprinkle, 120);
+loop();
