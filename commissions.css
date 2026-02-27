@@ -9,7 +9,7 @@
 }
 
 * {
-  cursor: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/58566fec-767c-4b43-9655-1d0cf69219fa/d5mznwj-ce70c2cf-8711-4ff8-8d77-bd661f084252.png), auto !important;
+  cursor: url("assets/images/cursor_cupcake.png"), auto;
   font-family: "MS UI Gothic", "MS PGothic", "MS Gothic", sans-serif;
   
 }
