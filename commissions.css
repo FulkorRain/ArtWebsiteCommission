@@ -44,7 +44,7 @@ body {
     margin: 0 auto;
     padding: 7px;
     color: var(--text-color);
-    background: black;
+    background: white;
     border: none; 
 
     box-shadow:
@@ -125,15 +125,25 @@ body {
     font-family: Floozy;
 }
 
+a:has(.return-button) {
+  text-decoration: none;
+}
+
 .return-button {
   background-image: url("assets/images/Rainbone.png");
   width: 90px;
   height: 40px;
   background-size: cover;
   color: hotpink;
-  text-decoration: none;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-text {
   display: inline-block;
+  margin-top: -5px;
 }
 
 
