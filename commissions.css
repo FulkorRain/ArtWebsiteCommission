@@ -61,15 +61,12 @@ body {
 }
 
 .header-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    width: 200px;
+    height: 200px;
 
     background-image: url("assets/images/Pupcake.png");
     background-size: cover;
     background-position: center;
-
-    border: 4px solid #ff00ff;
 }
 
 .header-image:hover {
