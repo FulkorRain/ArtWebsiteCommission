@@ -85,6 +85,21 @@ body {
     padding: 5px 0;
 }
 
+.commission-text h3 a {
+  display: inline-block; 
+  text-decoration: none;
+  color: #a0c4ff;
+  transition: transform 0.1s ease-in-out; 
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
 .tos-box {
     display: flex;
     flex-direction: column;
@@ -119,6 +134,7 @@ body {
   text-align: center;
   display: inline-block;
 }
+
 
 :is(html, body, .tos-box)::-webkit-scrollbar {
   width: 10px;
