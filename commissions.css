@@ -72,10 +72,6 @@ body {
     background-position: center;
 }
 
-.header-image:hover {
-    /* background-image: url("url"); */
-}
-
 .commission-text {
   text-align: center;
 }
@@ -139,6 +135,11 @@ a:has(.return-button) {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.2 ease;
+}
+
+.return-button:hover {
+  transform: scale(1.05);
 }
 
 .button-text {
