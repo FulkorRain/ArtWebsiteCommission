@@ -65,9 +65,9 @@ body {
     height: 150px;
     border-radius: 50%;
 
-    /* background-image: url("url");
+    background-image: url("assets/images/Pupcake.png");
     background-size: cover;
-    background-position: center; */
+    background-position: center;
 
     border: 4px solid #ff00ff;
 }
