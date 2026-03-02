@@ -61,13 +61,8 @@ body {
 }
 
 .header-image {
-    /* Note that these values could cause clipping issues */
-    width: 170px;
-    height: 165px;
-    /* Note that these values could cause clipping issues */
-    transform: scale(1.25); 
-    
-    transform-origin: center;
+    width: 171px;
+    height: 160px;
 
     background-image: url("assets/images/Pupcake.png");
     background-size: cover;
