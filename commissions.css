@@ -61,10 +61,11 @@ body {
 }
 
 .header-image {
-    width: 150px;
-    height: 150px;
-
-    transform: scale(1.33); 
+    /* Note that these values could cause clipping issues */
+    width: 170px;
+    height: 165px;
+    /* Note that these values could cause clipping issues */
+    transform: scale(1.25); 
     
     transform-origin: center;
 
