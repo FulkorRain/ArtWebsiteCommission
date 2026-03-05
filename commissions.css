@@ -199,4 +199,9 @@ a:has(.return-button) {
     height: auto;
     max-height: 200px;
   }
+
+  .header-image {
+    width: 150px;
+    height: 150px;
+  }
 }
