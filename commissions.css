@@ -186,3 +186,17 @@ a:has(.return-button) {
   pointer-events: none; 
   z-index: 4;   
 }
+
+@media (max-width: 800px){
+  .content {
+    width: 80vw;
+    height: auto;
+    margin: 15px auto; 
+  }
+
+  .tos-box {
+    width: 90%;
+    height: auto;
+    max-height: 200px;
+  }
+}
