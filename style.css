@@ -614,3 +614,7 @@ body {
 :is(html, body, .welcome-box, .status-content, .info-dump)::-webkit-scrollbar-thumb:hover{
   background: deeppink;
 }
+
+@media (max-width: 800px) {
+  
+}
