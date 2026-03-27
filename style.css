@@ -693,6 +693,24 @@ body {
     width: 90%;
   }
 
+  .mobile-calendar-image-one, .mobile-calendar-image-two {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+}
+
+ /* pain and suffering */
+ .mobile-calendar-image-one {
+   transform: translate(100px, 0px);
+ }
+  .mobile-calendar-image-two {
+   transform: translate(-15px, -150px);
+ }
+
+ .clock-container {
+  margin-left: 25px;
+ }
+ /* pain and suffering */
 
   .blinkies-area,
   .stamp-area {
