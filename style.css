@@ -615,6 +615,10 @@ body {
   background: deeppink;
 }
 
+.mobile-calendar-image-one, .mobile-calendar-image-two {
+  display: none;
+}
+
 @media (max-width: 800px) {
 
   body {
