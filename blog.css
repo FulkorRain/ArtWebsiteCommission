@@ -1,0 +1,242 @@
+@font-face {
+  font-family: 'Floozy';
+  src: url(assets/fonts/Floozy__.ttf)
+}
+
+* {
+  cursor: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/58566fec-767c-4b43-9655-1d0cf69219fa/d5mznwj-ce70c2cf-8711-4ff8-8d77-bd661f084252.png), auto !important;
+  font-family: "MS UI Gothic", "MS PGothic", "MS Gothic", sans-serif;
+      margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root { 
+  --text-color: hotpink;
+  /* --text-color: #b07469; */
+}
+
+body {
+    background: #f3f4f6;
+    color: #222;
+    min-height: 100vh;
+}
+
+.layout {
+    width: min(1300px, 95%);
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 24px;
+}
+
+.sidebar {
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+}
+
+.profile-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.profile-image {
+    width: 100%;
+    display: block;
+}
+
+.site-title {
+    padding: 18px;
+    font-size: 3.2rem;
+    border-bottom: 1px solid #ececec;
+    font-family: Floozy;
+    color: var(--text-color)
+}
+
+.site-description {
+    border: 3px solid var(--text-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.welcome-lace {
+    width: 100%;
+    display: block;
+    pointer-events: none;
+}
+
+.description-content {
+    max-height: 150px;
+    overflow-y: auto;
+    padding: 18px;
+    line-height: 1.6;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home a {
+    width: 100%;
+    text-align: center;
+    padding: 14px 18px;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.blinkies {
+    width: 100%;
+    height: 32px;
+
+    overflow: hidden;
+    position: relative;
+
+    border-top: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
+}
+
+.blinkies-track {
+    display: flex;
+    width: max-content;
+    align-items: center;
+
+    animation: blinkies-scroll 20s linear infinite;
+}
+
+.blinkies-track img {
+    height: 24px;
+    margin: 4px;
+    flex-shrink: 0;
+}
+
+.home:hover .blinkies-track {
+    animation-play-state: paused;
+}
+
+@keyframes blinkies-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 35vw;
+    margin-left: 4rem;
+}
+
+.hero-card {
+    background: white;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.hero-card h2 {
+    margin-bottom: 10px;
+}
+
+.post-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.post-image {
+    width: 100%;
+    display: block;
+}
+
+.post-body {
+    padding: 24px;
+}
+
+.post-title {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.post-meta {
+    display: flex;
+    gap: 18px;
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+}
+
+.post-content {
+    line-height: 1.7;
+}
+
+.post-tags {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    background: gray;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+}
+
+.page-clover {
+    position: fixed;
+
+    bottom: 10px;
+    right: 10px;
+
+    width: 110px; /* change size as u want but make sure the image is a nice 1:1 square or VERY close to such */
+    aspect-ratio: 1 / 1;
+
+    z-index: 9999;
+
+    pointer-events: none;
+}
+
+@media (max-width: 900px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+    }
+}
+
+* {
+    color: var(--text-color)
+}
+
+:is(html, body, .description-content )::-webkit-scrollbar {
+  width: 10px;
+}
+
+:is(html, body, .description-content )::-webkit-scrollbar-track{
+  background: rgba(255, 192, 203, 0.3);
+  border: 1px solid hotpink;
+}
+
+:is(html, body, .description-content )::-webkit-scrollbar-thumb {
+  background: hotpink;
+  border-radius: 10px;
+  border: 2px solid pink;
+}
+
+:is(html, body, .description-content )::-webkit-scrollbar-thumb:hover{
+  background: deeppink;
+}
