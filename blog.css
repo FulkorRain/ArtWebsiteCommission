@@ -82,11 +82,35 @@ body {
 }
 
 .home a {
-    width: 100%;
     text-align: center;
-    padding: 14px 18px;
     text-decoration: none;
     color: var(--text-color);
+}
+
+a:has(.return-button) {
+  text-decoration: none;
+}
+
+.return-button {
+  background-image: url("assets/images/Rainbone.png");
+  width: 90px;
+  height: 40px;
+  background-size: cover;
+  color: hotpink;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2 ease;
+}
+
+.return-button:hover {
+  transform: scale(1.05);
+}
+
+.button-text {
+  display: inline-block;
+  margin-top: -5px;
 }
 
 .blinkies {
