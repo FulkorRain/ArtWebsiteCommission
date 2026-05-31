@@ -185,6 +185,7 @@ a:has(.return-button) {
 
 .post-body {
     padding: 24px;
+     border: 3px cyan dotted;
 }
 
 .post-title {
