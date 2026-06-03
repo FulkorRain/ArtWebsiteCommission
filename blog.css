@@ -156,8 +156,8 @@ a:has(.return-button) {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    width: 35vw;
-    margin-left: 4rem;
+    width: min(700px, 100%);
+    margin-left: 0;
 }
 
 .hero-card {
@@ -234,13 +234,96 @@ a:has(.return-button) {
 }
 
 @media (max-width: 900px) {
+
+    .sidebar {
+        display: none;
+    }
+
     .layout {
+        width: 95%;
+        margin: 15px auto;
         grid-template-columns: 1fr;
+        gap: 16px;
     }
 
     .sidebar {
         position: static;
+        width: 100%;
     }
+
+    .profile-card {
+        width: 100%;
+    }
+
+    .content {
+        width: 100%;
+        margin-left: 0;
+        gap: 16px;
+    }
+
+    .site-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .hero-card,
+    .post-card {
+        width: 100%;
+    }
+
+    .post-body {
+        padding: 16px;
+    }
+
+    .post-title {
+        font-size: 1.25rem;
+    }
+
+    .post-meta {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .description-content {
+        max-height: 120px;
+    }
+
+    .return-button {
+        width: 80px;
+        height: 36px;
+    }
+
+    .blinkies {
+        height: 28px;
+    }
+
+    .blinkies-track {
+        animation-duration: 30s;
+    }
+
+    .blinkies-track img {
+        height: 20px;
+        margin: 2px;
+    }
+
+    .page-clover {
+        width: 70px;
+        bottom: 5px;
+        right: 5px;
+    }
+
+    .welcome-lace {
+        width: 100%;
+        height: auto;
+    }
+
+    .profile-image,
+    .post-image,
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
 }
 
 * {
