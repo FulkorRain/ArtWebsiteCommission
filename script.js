@@ -108,3 +108,25 @@ const volumeSlider = document.getElementById('volume-slider');
 volumeSlider.addEventListener('input', (e) => {
   track.volume = e.target.value;
 });
+
+// SPARKLE TRAIL
+
+document.addEventListener("mousemove", (e) => {
+  if (Math.random() > 0.45) return;
+
+  const sparkle = document.createElement("span");
+  sparkle.className = "sparkle";
+  sparkle.textContent = Math.random() > 0.5 ? "✦" : "✧";
+
+  sparkle.style.left = e.clientX + "px";
+  sparkle.style.top = e.clientY + "px";
+  sparkle.style.setProperty(
+    "--x",
+    (Math.random() * 50 - 25) + "px"
+  );
+  sparkle.style.fontSize = (Math.random() * 8 + 6) + "px";
+
+  document.body.appendChild(sparkle);
+
+  sparkle.addEventListener("animationend", () => sparkle.remove());
+});

@@ -750,3 +750,27 @@ body {
      margin-top: 0;
   }
 }
+
+/* Sparkle trail */
+
+
+.sparkle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 99999;
+  color: #ffe88a;
+  font-size: 12px;
+  user-select: none;
+  animation: sparkle-fall 800ms ease-out forwards;
+}
+
+@keyframes sparkle-fall {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--x), 35px) rotate(180deg) scale(0);
+  }
+}
