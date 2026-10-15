@@ -130,3 +130,111 @@ document.addEventListener("mousemove", (e) => {
 
   sparkle.addEventListener("animationend", () => sparkle.remove());
 });
+
+// TOYBOX
+
+
+const toybox = document.querySelector("#toybox-play-area");
+
+const toyImages = [
+  "https://file.garden/aStH4SBKNTw4mZIY/bunnysit.gif",
+  "https://file.garden/aStH4SBKNTw4mZIY/spoon.png",
+  "https://file.garden/aStH4SBKNTw4mZIY/petbed.png",
+  "https://file.garden/aStH4SBKNTw4mZIY/bowl.png",
+  "https://file.garden/aStH4SBKNTw4mZIY/popsicle.gif",
+  "https://file.garden/aStH4SBKNTw4mZIY/poptart.gif",
+  "https://file.garden/aStH4SBKNTw4mZIY/numnom.gif",
+  "https://file.garden/aStH4SBKNTw4mZIY/pinkcrown.gif",
+  "https://file.garden/aStH4SBKNTw4mZIY/Bluebowgraphic.gif",
+  "https://file.garden/aStH4SBKNTw4mZIY/bowgraphic.gif",
+  "https://file.garden/aStH4SBKNTw4mZIY/brush.png",
+  "https://file.garden/aStH4SBKNTw4mZIY/combgraphic.png"
+];
+
+const TOY_SIZE = 44;
+const toys = [];
+
+toyImages.forEach((src, index) => {
+  const img = document.createElement("img");
+
+  img.src = src;
+  img.alt = "Toy";
+  img.className = "toybox-item";
+  img.draggable = false;
+
+  img.style.left = `${(index * 31) % Math.max(1, toybox.clientWidth - TOY_SIZE)}px`;
+  img.style.top = `${Math.floor(index / 3) * 42 + (index % 3) * 8}px`;
+
+  toybox.appendChild(img);
+  toys.push(img);
+
+  img.addEventListener("pointerdown", startDrag);
+});
+
+let activeToy = null;
+let offsetX = 0;
+let offsetY = 0;
+let activePointerId = null;
+
+function startDrag(event) {
+  if (event.button !== 0 && event.pointerType === "mouse") return;
+
+  event.preventDefault();
+
+  const img = event.currentTarget;
+  const rect = img.getBoundingClientRect();
+
+  activeToy = img;
+  activePointerId = event.pointerId;
+
+  offsetX = event.clientX - rect.left;
+  offsetY = event.clientY - rect.top;
+
+  img.classList.add("is-free");
+  document.body.appendChild(img);
+
+  img.style.left = `${rect.left}px`;
+  img.style.top = `${rect.top}px`;
+
+  img.style.width = `${Math.min(TOY_SIZE, rect.width)}px`;
+  img.style.height = `${Math.min(TOY_SIZE, rect.height)}px`;
+
+  img.style.zIndex = "2147483647";
+
+  img.setPointerCapture(event.pointerId);
+  img.addEventListener("pointermove", dragToy);
+  img.addEventListener("pointerup", stopDrag);
+  img.addEventListener("pointercancel", stopDrag);
+}
+
+function dragToy(event) {
+  if (!activeToy || event.pointerId !== activePointerId) return;
+
+  event.preventDefault();
+
+  const maxX = window.innerWidth - activeToy.offsetWidth;
+  const maxY = window.innerHeight - activeToy.offsetHeight;
+
+  const x = Math.max(0, Math.min(event.clientX - offsetX, maxX));
+  const y = Math.max(0, Math.min(event.clientY - offsetY, maxY));
+
+  activeToy.style.left = `${x}px`;
+  activeToy.style.top = `${y}px`;
+}
+
+function stopDrag(event) {
+  if (!activeToy || event.pointerId !== activePointerId) return;
+
+  const img = activeToy;
+
+  img.removeEventListener("pointermove", dragToy);
+  img.removeEventListener("pointerup", stopDrag);
+  img.removeEventListener("pointercancel", stopDrag);
+
+  if (img.hasPointerCapture(event.pointerId)) {
+    img.releasePointerCapture(event.pointerId);
+  }
+
+  activeToy = null;
+  activePointerId = null;
+}
