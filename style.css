@@ -836,3 +836,14 @@ body {
     margin-top: 0;
   }
 }
+
+.credits-button {
+  color:rgb(241, 69, 241);
+  transition: transform 0.2s ease-in-out;
+  display: inline-block;
+}
+
+.credits-button:hover {
+  transform: scale(1.05);
+  color: red;
+}
