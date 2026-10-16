@@ -141,45 +141,48 @@ document.addEventListener("mousemove", (e) => {
   sparkle.addEventListener("animationend", () => sparkle.remove());
 });
 
-// TOYBOX
-
+// Toybox
 
 const toybox = document.querySelector("#toybox-play-area");
 
 const toyImages = [
-  "https://file.garden/aStH4SBKNTw4mZIY/bunnysit.gif",
-  "https://file.garden/aStH4SBKNTw4mZIY/spoon.png",
-  "https://file.garden/aStH4SBKNTw4mZIY/petbed.png",
-  "https://file.garden/aStH4SBKNTw4mZIY/bowl.png",
-  "https://file.garden/aStH4SBKNTw4mZIY/popsicle.gif",
-  "https://file.garden/aStH4SBKNTw4mZIY/poptart.gif",
-  "https://file.garden/aStH4SBKNTw4mZIY/numnom.gif",
-  "https://file.garden/aStH4SBKNTw4mZIY/pinkcrown.gif",
-  "https://file.garden/aStH4SBKNTw4mZIY/Bluebowgraphic.gif",
-  "https://file.garden/aStH4SBKNTw4mZIY/bowgraphic.gif",
-  "https://file.garden/aStH4SBKNTw4mZIY/brush.png",
-  "https://file.garden/aStH4SBKNTw4mZIY/combgraphic.png"
+  { src: "https://file.garden/aStH4SBKNTw4mZIY/bunnysit.gif", size: 44 },
+  { src: "https://file.garden/aStH4SBKNTw4mZIY/spoon.png", size: 88 },
+  { src: "https://file.garden/aStH4SBKNTw4mZIY/petbed.png", size: 44 },
+  { src: "https://file.garden/aStH4SBKNTw4mZIY/bowl.png", size: 44 },
+  { src: "https://file.garden/aStH4SBKNTw4mZIY/popsicle.gif", size: 44 },
+  { src: "https://file.garden/aStH4SBKNTw4mZIY/poptart.gif", size: 44 },
+  { src: "https://file.garden/aStH4SBKNTw4mZIY/numnom.gif", size: 44 },
+  { src: "https://file.garden/aStH4SBKNTw4mZIY/pinkcrown.gif", size: 44 },
+  { src: "https://file.garden/aStH4SBKNTw4mZIY/Bluebowgraphic.gif", size: 44 },
+  { src: "https://file.garden/aStH4SBKNTw4mZIY/bowgraphic.gif", size: 44 },
+  { src: "https://file.garden/aStH4SBKNTw4mZIY/brush.png", size: 88 },
+  { src: "https://file.garden/aStH4SBKNTw4mZIY/combgraphic.png", size: 44 }
 ];
 
-const TOY_SIZE = 44;
 const toys = [];
 
-toyImages.forEach((src, index) => {
-  const img = document.createElement("img");
+if (toybox) {
+  toyImages.forEach((toy, index) => {
+    const img = document.createElement("img");
 
-  img.src = src;
-  img.alt = "Toy";
-  img.className = "toybox-item";
-  img.draggable = false;
+    img.src = toy.src;
+    img.alt = "Toy";
+    img.className = "toybox-item";
+    img.draggable = false;
+    img.dataset.size = toy.size;
 
-  img.style.left = `${(index * 31) % Math.max(1, toybox.clientWidth - TOY_SIZE)}px`;
-  img.style.top = `${Math.floor(index / 3) * 42 + (index % 3) * 8}px`;
+    img.style.width = `${toy.size}px`;
+    img.style.height = `${toy.size}px`;
+    img.style.left = `${(index * 31) % Math.max(1, toybox.clientWidth - toy.size)}px`;
+    img.style.top = `${Math.floor(index / 3) * 42 + (index % 3) * 8}px`;
 
-  toybox.appendChild(img);
-  toys.push(img);
+    toybox.appendChild(img);
+    toys.push(img);
 
-  img.addEventListener("pointerdown", startDrag);
-});
+    img.addEventListener("pointerdown", startDrag);
+  });
+}
 
 let activeToy = null;
 let offsetX = 0;
@@ -206,12 +209,13 @@ function startDrag(event) {
   img.style.left = `${rect.left}px`;
   img.style.top = `${rect.top}px`;
 
-  img.style.width = `${Math.min(TOY_SIZE, rect.width)}px`;
-  img.style.height = `${Math.min(TOY_SIZE, rect.height)}px`;
-
+  const size = Number(img.dataset.size) || 44;
+  img.style.width = `${size}px`;
+  img.style.height = `${size}px`;
   img.style.zIndex = "2147483647";
 
   img.setPointerCapture(event.pointerId);
+
   img.addEventListener("pointermove", dragToy);
   img.addEventListener("pointerup", stopDrag);
   img.addEventListener("pointercancel", stopDrag);

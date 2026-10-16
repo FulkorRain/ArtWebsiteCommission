@@ -808,8 +808,8 @@ body {
   position: absolute;
   width: 44px;
   height: 44px;
-  max-width: 44px;
-  max-height: 44px;
+  max-width: 122px;
+  max-height: 122px;
   object-fit: contain;
   user-select: none;
   -webkit-user-drag: none;
@@ -822,8 +822,8 @@ body {
 .toybox-item.is-free {
   position: fixed !important;
   z-index: 2147483647 !important;
-  max-width: 44px;
-  max-height: 44px;
+  max-width: 122px;
+  max-height: 122px;
   cursor: grabbing !important;
   pointer-events: auto;
 }
