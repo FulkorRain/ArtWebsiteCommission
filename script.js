@@ -124,7 +124,7 @@ document.addEventListener("mousemove", (e) => {
     "--x",
     (Math.random() * 50 - 25) + "px"
   );
-  sparkle.style.fontSize = (Math.random() * 8 + 6) + "px";
+  sparkle.style.fontSize = (Math.random() * 8 + 20) + "px";
 
   document.body.appendChild(sparkle);
 
