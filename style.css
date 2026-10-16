@@ -838,7 +838,7 @@ body {
 }
 
 .credits-button {
-  color:rgb(241, 69, 241);
+  color:blue;
   transition: transform 0.2s ease-in-out;
   display: inline-block;
 }

@@ -252,3 +252,9 @@ function stopDrag(event) {
   activeToy = null;
   activePointerId = null;
 }
+
+const creditsButton = document.getElementById('credits-button');
+creditsButton.addEventListener('click', () => {
+  window.open('https://fulkorrain.github.io/');
+}
+)
