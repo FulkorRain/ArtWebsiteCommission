@@ -530,7 +530,10 @@ body {
   width: 90%;
   max-width: 256px;
   background-color: green;
-  border: 2px solid palegreen;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px solid hotpink;
   align-self: center;
   margin-bottom: -15px;
 }

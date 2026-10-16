@@ -38,6 +38,14 @@ const songs = ["Crystal Strawberry Garden", "Maid Sama OST", "Maid Sama OST 2", 
 const songCredits = ["Hello Kitty Dream Village", "Net idol AOI", "Misaki Junchou theme", "Elements Garden"]
 // #info song-credits (in order)
 
+// #info-song-img (in order)
+const videoImage = [
+  "https://file.garden/aStH4SBKNTw4mZIY/IMG_9441.png",
+  "https://file.garden/aStH4SBKNTw4mZIY/IMG_9447.jpeg", 
+  "https://file.garden/aStH4SBKNTw4mZIY/IMG_9443.png", 
+  "https://file.garden/aStH4SBKNTw4mZIY/IMG_9442.png"]
+// #info song-img (in order)
+
 let songIndex = 0;
 
 const track = document.getElementById('audio');
@@ -47,6 +55,7 @@ const prevButton = document.getElementById('prev');
 const progress = document.getElementById('progress');
 const title = document.querySelector('.track-name');
 const credits = document.querySelector('.track-credits');
+const imageElement = document.getElementById('video-image');
 
 loadSong(songs[songIndex]);
 
@@ -54,6 +63,7 @@ function loadSong(song) {
   title.innerText = song.replace('_', ' ');
   credits.innerText = songCredits[songIndex];
   track.src = `assets/audio/${song}.mp3`;
+  imageElement.style.backgroundImage = `url('${videoImage[songIndex]}')`;
 }
 
 
