@@ -318,10 +318,11 @@ body {
 
 .linkme-button{
   margin-left: 10px;
+  border: none;
 }
 
 .linkme-button img {
-  width: 88px;
+  max-width: 80px;
   height: auto;
 }
 
@@ -761,7 +762,7 @@ body {
   position: fixed;
   pointer-events: none;
   z-index: 99999;
-  color: #ffe88a;
+  color: white;
   font-size: 12px;
   user-select: none;
   animation: sparkle-fall 800ms ease-out forwards;
