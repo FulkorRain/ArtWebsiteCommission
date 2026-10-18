@@ -121,25 +121,85 @@ volumeSlider.addEventListener('input', (e) => {
 
 // SPARKLE TRAIL
 
-document.addEventListener("mousemove", (e) => {
+const canvas = document.createElement("canvas");
+const ctx = canvas.getContext("2d");
+
+Object.assign(canvas.style, {
+  position: "fixed",
+  inset: "0",
+  pointerEvents: "none",
+  zIndex: "99999"
+});
+
+document.body.appendChild(canvas);
+
+let width, height;
+const sparkles = [];
+
+function resize() {
+  const dpr = window.devicePixelRatio || 1;
+
+  width = window.innerWidth;
+  height = window.innerHeight;
+
+  canvas.width = width * dpr;
+  canvas.height = height * dpr;
+  canvas.style.width = width + "px";
+  canvas.style.height = height + "px";
+
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+}
+
+window.addEventListener("resize", resize);
+resize();
+
+document.addEventListener("mousemove", e => {
   if (Math.random() > 0.45) return;
 
-  const sparkle = document.createElement("span");
-  sparkle.className = "sparkle";
-  sparkle.textContent = Math.random() > 0.5 ? "✦" : "✧";
-
-  sparkle.style.left = e.clientX + "px";
-  sparkle.style.top = e.clientY + "px";
-  sparkle.style.setProperty(
-    "--x",
-    (Math.random() * 50 - 25) + "px"
-  );
-  sparkle.style.fontSize = (Math.random() * 8 + 20) + "px";
-
-  document.body.appendChild(sparkle);
-
-  sparkle.addEventListener("animationend", () => sparkle.remove());
+  sparkles.push({
+    x: e.clientX,
+    y: e.clientY,
+    drift: Math.random() * 50 - 25,
+    size: Math.random() * 8 + 20,
+    char: Math.random() > 0.5 ? "✦" : "✧",
+    life: 1,
+    rotation: 0
+  });
 });
+
+function animate() {
+  ctx.clearRect(0, 0, width, height);
+
+  for (let i = sparkles.length - 1; i >= 0; i--) {
+    const s = sparkles[i];
+
+    ctx.save();
+    ctx.globalAlpha = s.life;
+    ctx.fillStyle = "white";
+    ctx.font = `${s.size}px serif`;
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+
+    ctx.translate(
+      s.x + s.drift * (1 - s.life),
+      s.y + 35 * (1 - s.life)
+    );
+
+    ctx.rotate((1 - s.life) * Math.PI);
+    ctx.fillText(s.char, 0, 0);
+    ctx.restore();
+
+    s.life -= 1 / 48;
+
+    if (s.life <= 0) {
+      sparkles.splice(i, 1);
+    }
+  }
+
+  requestAnimationFrame(animate);
+}
+
+animate();
 
 // Toybox
 
