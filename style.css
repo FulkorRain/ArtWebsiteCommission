@@ -316,7 +316,7 @@ body {
   z-index: 0;
 }
 
-.linkme-button{
+.linkme-button {
   margin-left: 10px;
   border: none;
 }
@@ -324,6 +324,15 @@ body {
 .linkme-button img {
   max-width: 80px;
   height: auto;
+  transition: transform 0.1s ease
+}
+
+.linkme-button img:hover {
+  transform: scale(1.05);
+}
+
+.linkme-button img:active {
+  transform: scale(0.95);
 }
 
 
