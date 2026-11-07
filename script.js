@@ -8,7 +8,7 @@ updateClock();
 
 
 function copyLink() {
-  const code = `<a href="https://fulkorrain.github.io/ArtWebsiteCommission/">
+  const code = `<a href="https://fruitsphynx.nekoweb.org/">
   <img src="https://file.garden/aStH4SBKNTw4mZIY/Fruitsphynxbutton.gif" alt="Link me">
 </a>`;
 
